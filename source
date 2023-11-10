@@ -1,0 +1,2426 @@
+local debugfinder = game.CoreGui:FindFirstChild("GoodBoi")
+if debugfinder then
+	debugfinder:Destroy()
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "@creepstu:";
+		Text = "Did you just reexecute it?";
+		Icon = "";
+		Duration = math.huge; 
+		Button1 = "Yes Sir";
+	})
+end
+
+local Converted = {
+	["_GoodBoi"] = Instance.new("ScreenGui");
+	["_SoundSystem"] = Instance.new("LocalScript");
+	["_clicking"] = Instance.new("Sound");
+	["_leaves"] = Instance.new("Sound");
+	["_hovers"] = Instance.new("Sound");
+	["_Main"] = Instance.new("Frame");
+	["_Main2"] = Instance.new("Frame");
+	["_UnmuteGame"] = Instance.new("TextButton");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_Stop"] = Instance.new("TextButton");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_Wait"] = Instance.new("TextBox");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_shadowHolder"] = Instance.new("Frame");
+	["_ambientShadow"] = Instance.new("ImageLabel");
+	["_penumbraShadow"] = Instance.new("ImageLabel");
+	["_umbraShadow"] = Instance.new("ImageLabel");
+	["_KillSoundService"] = Instance.new("TextButton");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_AnnoyingSound"] = Instance.new("TextButton");
+	["_LocalScript4"] = Instance.new("LocalScript");
+	["_MuteGame"] = Instance.new("TextButton");
+	["_LocalScript5"] = Instance.new("LocalScript");
+	["_Back"] = Instance.new("TextButton");
+	["_LocalScript6"] = Instance.new("LocalScript");
+	["_UnboxAllCrates"] = Instance.new("TextButton");
+	["_LocalScript7"] = Instance.new("LocalScript");
+	["_Aimbot"] = Instance.new("TextButton");
+	["_LocalScript8"] = Instance.new("LocalScript");
+	["_shadowHolder1"] = Instance.new("Frame");
+	["_ambientShadow1"] = Instance.new("ImageLabel");
+	["_penumbraShadow1"] = Instance.new("ImageLabel");
+	["_umbraShadow1"] = Instance.new("ImageLabel");
+	["_Frame"] = Instance.new("Frame");
+	["_Frame1"] = Instance.new("Frame");
+	["_SheriffConsole"] = Instance.new("TextLabel");
+	["_MurdConsole"] = Instance.new("TextLabel");
+	["_UIStroke"] = Instance.new("UIStroke");
+	["_More"] = Instance.new("TextButton");
+	["_LocalScript9"] = Instance.new("LocalScript");
+	["_DetectWarTool"] = Instance.new("TextButton");
+	["_LocalScript10"] = Instance.new("LocalScript");
+	["_WeAreDevsESP"] = Instance.new("TextButton");
+	["_LocalScript11"] = Instance.new("LocalScript");
+	["_shadowHolder2"] = Instance.new("Frame");
+	["_ambientShadow2"] = Instance.new("ImageLabel");
+	["_penumbraShadow2"] = Instance.new("ImageLabel");
+	["_umbraShadow2"] = Instance.new("ImageLabel");
+	["_Codes"] = Instance.new("TextButton");
+	["_LocalScript12"] = Instance.new("LocalScript");
+	["_Flee"] = Instance.new("TextButton");
+	["_LocalScript13"] = Instance.new("LocalScript");
+	["_Main3"] = Instance.new("Frame");
+	["_TextBox"] = Instance.new("TextBox");
+	["_TextBox1"] = Instance.new("TextBox");
+	["_TextBox2"] = Instance.new("TextBox");
+	["_TextBox3"] = Instance.new("TextBox");
+	["_TextBox4"] = Instance.new("TextBox");
+	["_TextBox5"] = Instance.new("TextBox");
+	["_TextBox6"] = Instance.new("TextBox");
+	["_TextBox7"] = Instance.new("TextBox");
+	["_TextBox8"] = Instance.new("TextBox");
+	["_TextBox9"] = Instance.new("TextBox");
+	["_TextBox10"] = Instance.new("TextBox");
+	["_TextBox11"] = Instance.new("TextBox");
+	["_shadowHolder3"] = Instance.new("Frame");
+	["_ambientShadow3"] = Instance.new("ImageLabel");
+	["_penumbraShadow3"] = Instance.new("ImageLabel");
+	["_umbraShadow3"] = Instance.new("ImageLabel");
+	["_More1"] = Instance.new("TextButton");
+	["_LocalScript14"] = Instance.new("LocalScript");
+	["_Main4"] = Instance.new("Frame");
+	["_shadowHolder4"] = Instance.new("Frame");
+	["_umbraShadow4"] = Instance.new("ImageLabel");
+	["_penumbraShadow4"] = Instance.new("ImageLabel");
+	["_ambientShadow4"] = Instance.new("ImageLabel");
+	["_TextBox12"] = Instance.new("TextBox");
+	["_TextBox13"] = Instance.new("TextBox");
+	["_TextBox14"] = Instance.new("TextBox");
+	["_TextBox15"] = Instance.new("TextBox");
+	["_TextBox16"] = Instance.new("TextBox");
+	["_TextBox17"] = Instance.new("TextBox");
+	["_TextBox18"] = Instance.new("TextBox");
+	["_TextBox19"] = Instance.new("TextBox");
+	["_TextBox20"] = Instance.new("TextBox");
+	["_TextBox21"] = Instance.new("TextBox");
+	["_TextBox22"] = Instance.new("TextBox");
+	["_TextBox23"] = Instance.new("TextBox");
+	["_TextBox24"] = Instance.new("TextBox");
+	["_TextBox25"] = Instance.new("TextBox");
+	["_Back1"] = Instance.new("TextButton");
+	["_LocalScript15"] = Instance.new("LocalScript");
+	["_Back2"] = Instance.new("TextButton");
+	["_LocalScript16"] = Instance.new("LocalScript");
+	["_Main5"] = Instance.new("Frame");
+	["_shadowHolder5"] = Instance.new("Frame");
+	["_umbraShadow5"] = Instance.new("ImageLabel");
+	["_penumbraShadow5"] = Instance.new("ImageLabel");
+	["_ambientShadow5"] = Instance.new("ImageLabel");
+	["_LobbyTeleport"] = Instance.new("TextButton");
+	["_LocalScript17"] = Instance.new("LocalScript");
+	["_RemoveGameHopper"] = Instance.new("TextButton");
+	["_LocalScript18"] = Instance.new("LocalScript");
+	["_Back3"] = Instance.new("TextButton");
+	["_LocalScript19"] = Instance.new("LocalScript");
+	["_EndCurrentRound"] = Instance.new("TextButton");
+	["_LocalScript20"] = Instance.new("LocalScript");
+	["_CoinsCollector"] = Instance.new("TextButton");
+	["_LocalScript21"] = Instance.new("LocalScript");
+	["_MoreV2"] = Instance.new("TextButton");
+	["_LocalScript22"] = Instance.new("LocalScript");
+	["_Destroy"] = Instance.new("TextButton");
+	["_LocalScript23"] = Instance.new("LocalScript");
+	["_Toggler"] = Instance.new("Frame");
+	["_TextButton"] = Instance.new("TextButton");
+	["_LocalScript24"] = Instance.new("LocalScript");
+	["_shadowHolder6"] = Instance.new("Frame");
+	["_ambientShadow6"] = Instance.new("ImageLabel");
+	["_penumbraShadow6"] = Instance.new("ImageLabel");
+	["_umbraShadow6"] = Instance.new("ImageLabel");
+	["_Notice"] = Instance.new("LocalScript");
+}
+
+-- Properties:
+
+Converted["_GoodBoi"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_GoodBoi"].Name = "GoodBoi"
+
+Converted["_clicking"].SoundId = "rbxassetid://3848738002"
+Converted["_clicking"].Name = "clicking"
+Converted["_clicking"].Parent = Converted["_GoodBoi"]
+
+Converted["_leaves"].SoundId = "rbxassetid://7081901750"
+Converted["_leaves"].Name = "leaves"
+Converted["_leaves"].Parent = Converted["_GoodBoi"]
+
+Converted["_hovers"].SoundId = "rbxassetid://501833386"
+Converted["_hovers"].Name = "hovers"
+Converted["_hovers"].Parent = Converted["_GoodBoi"]
+
+Converted["_Main"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Main"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main"].BorderSizePixel = 0
+Converted["_Main"].Position = UDim2.new(0.345252782, 0, 0.549206376, 0)
+Converted["_Main"].Size = UDim2.new(0.308261395, 0, 0.269841284, 0)
+Converted["_Main"].Visible = false
+Converted["_Main"].Name = "Main"
+Converted["_Main"].Parent = Converted["_GoodBoi"]
+
+Converted["_Main2"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Main2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main2"].BorderSizePixel = 0
+Converted["_Main2"].Position = UDim2.new(-0.00274719228, 0, 0.00214753998, 0)
+Converted["_Main2"].Size = UDim2.new(1.00000012, 0, 0.999999881, 0)
+Converted["_Main2"].Visible = false
+Converted["_Main2"].ZIndex = 2
+Converted["_Main2"].Name = "Main2"
+Converted["_Main2"].Parent = Converted["_Main"]
+
+Converted["_UnmuteGame"].Font = Enum.Font.Highway
+Converted["_UnmuteGame"].Text = "Unmute Game"
+Converted["_UnmuteGame"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_UnmuteGame"].TextScaled = true
+Converted["_UnmuteGame"].TextSize = 14
+Converted["_UnmuteGame"].TextWrapped = true
+Converted["_UnmuteGame"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_UnmuteGame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_UnmuteGame"].BorderSizePixel = 0
+Converted["_UnmuteGame"].Position = UDim2.new(0.0799999982, 0, 0.529411793, 0)
+Converted["_UnmuteGame"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_UnmuteGame"].Name = "UnmuteGame"
+Converted["_UnmuteGame"].Parent = Converted["_Main2"]
+
+Converted["_Stop"].Font = Enum.Font.Highway
+Converted["_Stop"].Text = "Stop"
+Converted["_Stop"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_Stop"].TextScaled = true
+Converted["_Stop"].TextSize = 14
+Converted["_Stop"].TextWrapped = true
+Converted["_Stop"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Stop"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Stop"].BorderSizePixel = 0
+Converted["_Stop"].Position = UDim2.new(0.519999981, 0, 0.741176486, 0)
+Converted["_Stop"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_Stop"].Name = "Stop"
+Converted["_Stop"].Parent = Converted["_Main2"]
+
+Converted["_Wait"].Font = Enum.Font.Unknown
+Converted["_Wait"].PlaceholderText = "Duration Speed..."
+Converted["_Wait"].Text = "0.5"
+Converted["_Wait"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_Wait"].TextSize = 14
+Converted["_Wait"].TextWrapped = true
+Converted["_Wait"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Wait"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Wait"].BorderSizePixel = 0
+Converted["_Wait"].Position = UDim2.new(0.239999995, 0, -0.182352945, 0)
+Converted["_Wait"].Size = UDim2.new(0.519999981, 0, 0.176470593, 0)
+Converted["_Wait"].Name = "Wait"
+Converted["_Wait"].Parent = Converted["_Main2"]
+
+Converted["_shadowHolder"].BackgroundTransparency = 1
+Converted["_shadowHolder"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder"].ZIndex = 0
+Converted["_shadowHolder"].Name = "shadowHolder"
+Converted["_shadowHolder"].Parent = Converted["_Wait"]
+
+Converted["_ambientShadow"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow"].BackgroundTransparency = 1
+Converted["_ambientShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow"].Size = UDim2.new(1.01538467, 0, 1.06666672, 0)
+Converted["_ambientShadow"].ZIndex = 0
+Converted["_ambientShadow"].Name = "ambientShadow"
+Converted["_ambientShadow"].Parent = Converted["_shadowHolder"]
+
+Converted["_penumbraShadow"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow"].BackgroundTransparency = 1
+Converted["_penumbraShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow"].Size = UDim2.new(1.01538467, 0, 1.06666672, 0)
+Converted["_penumbraShadow"].ZIndex = 0
+Converted["_penumbraShadow"].Name = "penumbraShadow"
+Converted["_penumbraShadow"].Parent = Converted["_shadowHolder"]
+
+Converted["_umbraShadow"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow"].BackgroundTransparency = 1
+Converted["_umbraShadow"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow"].Size = UDim2.new(1.01538467, 0, 1.06666672, 0)
+Converted["_umbraShadow"].ZIndex = 0
+Converted["_umbraShadow"].Name = "umbraShadow"
+Converted["_umbraShadow"].Parent = Converted["_shadowHolder"]
+
+Converted["_KillSoundService"].Font = Enum.Font.Highway
+Converted["_KillSoundService"].Text = "Kill Sound Service"
+Converted["_KillSoundService"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_KillSoundService"].TextScaled = true
+Converted["_KillSoundService"].TextSize = 14
+Converted["_KillSoundService"].TextWrapped = true
+Converted["_KillSoundService"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_KillSoundService"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_KillSoundService"].BorderSizePixel = 0
+Converted["_KillSoundService"].Position = UDim2.new(0.519999981, 0, 0.529411793, 0)
+Converted["_KillSoundService"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_KillSoundService"].Name = "KillSoundService"
+Converted["_KillSoundService"].Parent = Converted["_Main2"]
+
+Converted["_AnnoyingSound"].Font = Enum.Font.Highway
+Converted["_AnnoyingSound"].Text = "Annoying Sound"
+Converted["_AnnoyingSound"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_AnnoyingSound"].TextScaled = true
+Converted["_AnnoyingSound"].TextSize = 14
+Converted["_AnnoyingSound"].TextWrapped = true
+Converted["_AnnoyingSound"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_AnnoyingSound"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_AnnoyingSound"].BorderSizePixel = 0
+Converted["_AnnoyingSound"].Position = UDim2.new(0.519999981, 0, 0.323529422, 0)
+Converted["_AnnoyingSound"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_AnnoyingSound"].Name = "AnnoyingSound"
+Converted["_AnnoyingSound"].Parent = Converted["_Main2"]
+
+Converted["_MuteGame"].Font = Enum.Font.Highway
+Converted["_MuteGame"].Text = "Mute Game"
+Converted["_MuteGame"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_MuteGame"].TextScaled = true
+Converted["_MuteGame"].TextSize = 14
+Converted["_MuteGame"].TextWrapped = true
+Converted["_MuteGame"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_MuteGame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MuteGame"].BorderSizePixel = 0
+Converted["_MuteGame"].Position = UDim2.new(0.0799999982, 0, 0.323529422, 0)
+Converted["_MuteGame"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_MuteGame"].Name = "MuteGame"
+Converted["_MuteGame"].Parent = Converted["_Main2"]
+
+Converted["_Back"].Font = Enum.Font.Unknown
+Converted["_Back"].Text = "BACK"
+Converted["_Back"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Back"].TextScaled = true
+Converted["_Back"].TextSize = 14
+Converted["_Back"].TextWrapped = true
+Converted["_Back"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Back"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Back"].BorderSizePixel = 0
+Converted["_Back"].Position = UDim2.new(0.25999999, 0, 0.800000012, 0)
+Converted["_Back"].Size = UDim2.new(0.219999984, 0, 0.0882352963, 0)
+Converted["_Back"].Name = "Back"
+Converted["_Back"].Parent = Converted["_Main2"]
+
+Converted["_UnboxAllCrates"].Font = Enum.Font.Highway
+Converted["_UnboxAllCrates"].Text = "Unbox All Crates"
+Converted["_UnboxAllCrates"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_UnboxAllCrates"].TextScaled = true
+Converted["_UnboxAllCrates"].TextSize = 14
+Converted["_UnboxAllCrates"].TextWrapped = true
+Converted["_UnboxAllCrates"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_UnboxAllCrates"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_UnboxAllCrates"].BorderSizePixel = 0
+Converted["_UnboxAllCrates"].Position = UDim2.new(0.519999981, 0, 0.117647059, 0)
+Converted["_UnboxAllCrates"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_UnboxAllCrates"].Name = "UnboxAllCrates"
+Converted["_UnboxAllCrates"].Parent = Converted["_Main2"]
+
+Converted["_Aimbot"].Font = Enum.Font.Highway
+Converted["_Aimbot"].Text = "Aimbot"
+Converted["_Aimbot"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_Aimbot"].TextScaled = true
+Converted["_Aimbot"].TextSize = 14
+Converted["_Aimbot"].TextWrapped = true
+Converted["_Aimbot"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Aimbot"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Aimbot"].BorderSizePixel = 0
+Converted["_Aimbot"].Position = UDim2.new(0.0799999982, 0, 0.117647059, 0)
+Converted["_Aimbot"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_Aimbot"].Name = "Aimbot"
+Converted["_Aimbot"].Parent = Converted["_Main2"]
+
+Converted["_shadowHolder1"].BackgroundTransparency = 1
+Converted["_shadowHolder1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder1"].ZIndex = 0
+Converted["_shadowHolder1"].Name = "shadowHolder"
+Converted["_shadowHolder1"].Parent = Converted["_Main2"]
+
+Converted["_ambientShadow1"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow1"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow1"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow1"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow1"].BackgroundTransparency = 1
+Converted["_ambientShadow1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow1"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_ambientShadow1"].ZIndex = 0
+Converted["_ambientShadow1"].Name = "ambientShadow"
+Converted["_ambientShadow1"].Parent = Converted["_shadowHolder1"]
+
+Converted["_penumbraShadow1"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow1"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow1"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow1"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow1"].BackgroundTransparency = 1
+Converted["_penumbraShadow1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow1"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_penumbraShadow1"].ZIndex = 0
+Converted["_penumbraShadow1"].Name = "penumbraShadow"
+Converted["_penumbraShadow1"].Parent = Converted["_shadowHolder1"]
+
+Converted["_umbraShadow1"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow1"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow1"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow1"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow1"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow1"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow1"].BackgroundTransparency = 1
+Converted["_umbraShadow1"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow1"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_umbraShadow1"].ZIndex = 0
+Converted["_umbraShadow1"].Name = "umbraShadow"
+Converted["_umbraShadow1"].Parent = Converted["_shadowHolder1"]
+
+Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame"].BorderSizePixel = 0
+Converted["_Frame"].Position = UDim2.new(0.0800000057, 0, 0.274583727, 0)
+Converted["_Frame"].Size = UDim2.new(0.836000025, 0, 0.441176444, 0)
+Converted["_Frame"].Parent = Converted["_Main"]
+
+Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(0, 85.0000025331974, 0)
+Converted["_Frame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame1"].BorderSizePixel = 0
+Converted["_Frame1"].Position = UDim2.new(0, 0, 0.49333334, 0)
+Converted["_Frame1"].Size = UDim2.new(1, 0, 0.0133333337, 0)
+Converted["_Frame1"].Parent = Converted["_Frame"]
+
+Converted["_SheriffConsole"].Font = Enum.Font.Highway
+Converted["_SheriffConsole"].Text = "N/A"
+Converted["_SheriffConsole"].TextColor3 = Color3.fromRGB(0, 0, 255)
+Converted["_SheriffConsole"].TextScaled = true
+Converted["_SheriffConsole"].TextSize = 14
+Converted["_SheriffConsole"].TextWrapped = true
+Converted["_SheriffConsole"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_SheriffConsole"].BackgroundTransparency = 1
+Converted["_SheriffConsole"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_SheriffConsole"].BorderSizePixel = 0
+Converted["_SheriffConsole"].Position = UDim2.new(0.0240000002, 0, 0.550000012, 0)
+Converted["_SheriffConsole"].Size = UDim2.new(0.95693779, 0, 0.400000006, 0)
+Converted["_SheriffConsole"].Name = "SheriffConsole"
+Converted["_SheriffConsole"].Parent = Converted["_Frame"]
+
+Converted["_MurdConsole"].Font = Enum.Font.Highway
+Converted["_MurdConsole"].Text = "N/A"
+Converted["_MurdConsole"].TextColor3 = Color3.fromRGB(255, 0, 0)
+Converted["_MurdConsole"].TextScaled = true
+Converted["_MurdConsole"].TextSize = 14
+Converted["_MurdConsole"].TextWrapped = true
+Converted["_MurdConsole"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_MurdConsole"].BackgroundTransparency = 1
+Converted["_MurdConsole"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MurdConsole"].BorderSizePixel = 0
+Converted["_MurdConsole"].Position = UDim2.new(0.0239234455, 0, 0.0666666701, 0)
+Converted["_MurdConsole"].Size = UDim2.new(0.95693779, 0, 0.400000006, 0)
+Converted["_MurdConsole"].Name = "MurdConsole"
+Converted["_MurdConsole"].Parent = Converted["_Frame"]
+
+Converted["_UIStroke"].ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+Converted["_UIStroke"].Color = Color3.fromRGB(0, 85.0000025331974, 0)
+Converted["_UIStroke"].Parent = Converted["_Frame"]
+
+Converted["_More"].Font = Enum.Font.Unknown
+Converted["_More"].Text = "MORE"
+Converted["_More"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_More"].TextScaled = true
+Converted["_More"].TextSize = 14
+Converted["_More"].TextWrapped = true
+Converted["_More"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_More"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_More"].BorderSizePixel = 0
+Converted["_More"].Position = UDim2.new(0.388000011, 0, 0.751054466, 0)
+Converted["_More"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_More"].Name = "More"
+Converted["_More"].Parent = Converted["_Main"]
+
+Converted["_DetectWarTool"].Font = Enum.Font.Highway
+Converted["_DetectWarTool"].Text = "Detect War Tool"
+Converted["_DetectWarTool"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_DetectWarTool"].TextScaled = true
+Converted["_DetectWarTool"].TextSize = 14
+Converted["_DetectWarTool"].TextWrapped = true
+Converted["_DetectWarTool"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_DetectWarTool"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DetectWarTool"].BorderSizePixel = 0
+Converted["_DetectWarTool"].Position = UDim2.new(0.520000041, 0, 0.0687015206, 0)
+Converted["_DetectWarTool"].Size = UDim2.new(0.400000036, 0, 0.147058815, 0)
+Converted["_DetectWarTool"].Name = "DetectWarTool"
+Converted["_DetectWarTool"].Parent = Converted["_Main"]
+
+Converted["_WeAreDevsESP"].Font = Enum.Font.Highway
+Converted["_WeAreDevsESP"].Text = "WeAreDevs' ESP"
+Converted["_WeAreDevsESP"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_WeAreDevsESP"].TextScaled = true
+Converted["_WeAreDevsESP"].TextSize = 14
+Converted["_WeAreDevsESP"].TextWrapped = true
+Converted["_WeAreDevsESP"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_WeAreDevsESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_WeAreDevsESP"].BorderSizePixel = 0
+Converted["_WeAreDevsESP"].Position = UDim2.new(0.0800000057, 0, 0.0687015206, 0)
+Converted["_WeAreDevsESP"].Size = UDim2.new(0.400000036, 0, 0.147058815, 0)
+Converted["_WeAreDevsESP"].Name = "WeAreDevsESP"
+Converted["_WeAreDevsESP"].Parent = Converted["_Main"]
+
+Converted["_shadowHolder2"].BackgroundTransparency = 1
+Converted["_shadowHolder2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder2"].ZIndex = 0
+Converted["_shadowHolder2"].Name = "shadowHolder"
+Converted["_shadowHolder2"].Parent = Converted["_Main"]
+
+Converted["_ambientShadow2"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow2"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow2"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow2"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow2"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow2"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow2"].BackgroundTransparency = 1
+Converted["_ambientShadow2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow2"].Size = UDim2.new(1.00800002, 0, 1.01176465, 0)
+Converted["_ambientShadow2"].ZIndex = 0
+Converted["_ambientShadow2"].Name = "ambientShadow"
+Converted["_ambientShadow2"].Parent = Converted["_shadowHolder2"]
+
+Converted["_penumbraShadow2"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow2"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow2"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow2"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow2"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow2"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow2"].BackgroundTransparency = 1
+Converted["_penumbraShadow2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow2"].Size = UDim2.new(1.00800002, 0, 1.01176465, 0)
+Converted["_penumbraShadow2"].ZIndex = 0
+Converted["_penumbraShadow2"].Name = "penumbraShadow"
+Converted["_penumbraShadow2"].Parent = Converted["_shadowHolder2"]
+
+Converted["_umbraShadow2"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow2"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow2"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow2"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow2"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow2"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow2"].BackgroundTransparency = 1
+Converted["_umbraShadow2"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow2"].Size = UDim2.new(1.00800002, 0, 1.01176465, 0)
+Converted["_umbraShadow2"].ZIndex = 0
+Converted["_umbraShadow2"].Name = "umbraShadow"
+Converted["_umbraShadow2"].Parent = Converted["_shadowHolder2"]
+
+Converted["_Codes"].Font = Enum.Font.Unknown
+Converted["_Codes"].Text = "CODES"
+Converted["_Codes"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Codes"].TextScaled = true
+Converted["_Codes"].TextSize = 14
+Converted["_Codes"].TextWrapped = true
+Converted["_Codes"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Codes"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Codes"].BorderSizePixel = 0
+Converted["_Codes"].Position = UDim2.new(0.100000009, 0, 0.751054466, 0)
+Converted["_Codes"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_Codes"].Name = "Codes"
+Converted["_Codes"].Parent = Converted["_Main"]
+
+Converted["_Flee"].Font = Enum.Font.Unknown
+Converted["_Flee"].Text = "FLEE"
+Converted["_Flee"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Flee"].TextScaled = true
+Converted["_Flee"].TextSize = 14
+Converted["_Flee"].TextWrapped = true
+Converted["_Flee"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Flee"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Flee"].BorderSizePixel = 0
+Converted["_Flee"].Position = UDim2.new(0.680000067, 0, 0.751054466, 0)
+Converted["_Flee"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_Flee"].Name = "Flee"
+Converted["_Flee"].Parent = Converted["_Main"]
+
+Converted["_Main3"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Main3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main3"].BorderSizePixel = 0
+Converted["_Main3"].Position = UDim2.new(-0.00274719228, 0, 0.00214753998, 0)
+Converted["_Main3"].Size = UDim2.new(1.00000012, 0, 0.999999881, 0)
+Converted["_Main3"].Visible = false
+Converted["_Main3"].ZIndex = 3
+Converted["_Main3"].Name = "Main3"
+Converted["_Main3"].Parent = Converted["_Main"]
+
+Converted["_TextBox"].ClearTextOnFocus = false
+Converted["_TextBox"].Font = Enum.Font.Jura
+Converted["_TextBox"].ShowNativeInput = false
+Converted["_TextBox"].Text = "100K"
+Converted["_TextBox"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox"].TextEditable = false
+Converted["_TextBox"].TextScaled = true
+Converted["_TextBox"].TextSize = 14
+Converted["_TextBox"].TextWrapped = true
+Converted["_TextBox"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox"].BorderSizePixel = 0
+Converted["_TextBox"].Position = UDim2.new(0.0440003648, 0, 0.0279689245, 0)
+Converted["_TextBox"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox"].ZIndex = 3
+Converted["_TextBox"].Parent = Converted["_Main3"]
+
+Converted["_TextBox1"].ClearTextOnFocus = false
+Converted["_TextBox1"].Font = Enum.Font.Jura
+Converted["_TextBox1"].ShowNativeInput = false
+Converted["_TextBox1"].Text = "11FNAT1K"
+Converted["_TextBox1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox1"].TextEditable = false
+Converted["_TextBox1"].TextScaled = true
+Converted["_TextBox1"].TextSize = 14
+Converted["_TextBox1"].TextWrapped = true
+Converted["_TextBox1"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox1"].BorderSizePixel = 0
+Converted["_TextBox1"].Position = UDim2.new(0.523999989, 0, 0.0280465968, 0)
+Converted["_TextBox1"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox1"].ZIndex = 3
+Converted["_TextBox1"].Parent = Converted["_Main3"]
+
+Converted["_TextBox2"].ClearTextOnFocus = false
+Converted["_TextBox2"].Font = Enum.Font.Jura
+Converted["_TextBox2"].ShowNativeInput = false
+Converted["_TextBox2"].Text = "300K"
+Converted["_TextBox2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox2"].TextEditable = false
+Converted["_TextBox2"].TextScaled = true
+Converted["_TextBox2"].TextSize = 14
+Converted["_TextBox2"].TextWrapped = true
+Converted["_TextBox2"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox2"].BorderSizePixel = 0
+Converted["_TextBox2"].Position = UDim2.new(0.523999989, 0, 0.167891219, 0)
+Converted["_TextBox2"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox2"].ZIndex = 3
+Converted["_TextBox2"].Parent = Converted["_Main3"]
+
+Converted["_TextBox3"].ClearTextOnFocus = false
+Converted["_TextBox3"].Font = Enum.Font.Jura
+Converted["_TextBox3"].ShowNativeInput = false
+Converted["_TextBox3"].Text = "16KVISITS"
+Converted["_TextBox3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox3"].TextEditable = false
+Converted["_TextBox3"].TextScaled = true
+Converted["_TextBox3"].TextSize = 14
+Converted["_TextBox3"].TextWrapped = true
+Converted["_TextBox3"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox3"].BorderSizePixel = 0
+Converted["_TextBox3"].Position = UDim2.new(0.0440003648, 0, 0.16781354, 0)
+Converted["_TextBox3"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox3"].ZIndex = 3
+Converted["_TextBox3"].Parent = Converted["_Main3"]
+
+Converted["_TextBox4"].ClearTextOnFocus = false
+Converted["_TextBox4"].Font = Enum.Font.Jura
+Converted["_TextBox4"].ShowNativeInput = false
+Converted["_TextBox4"].Text = "ANT"
+Converted["_TextBox4"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox4"].TextEditable = false
+Converted["_TextBox4"].TextScaled = true
+Converted["_TextBox4"].TextSize = 14
+Converted["_TextBox4"].TextWrapped = true
+Converted["_TextBox4"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox4"].BorderSizePixel = 0
+Converted["_TextBox4"].Position = UDim2.new(0.523999989, 0, 0.307735831, 0)
+Converted["_TextBox4"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox4"].ZIndex = 3
+Converted["_TextBox4"].Parent = Converted["_Main3"]
+
+Converted["_TextBox5"].ClearTextOnFocus = false
+Converted["_TextBox5"].Font = Enum.Font.Jura
+Converted["_TextBox5"].ShowNativeInput = false
+Converted["_TextBox5"].Text = "58K"
+Converted["_TextBox5"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox5"].TextEditable = false
+Converted["_TextBox5"].TextScaled = true
+Converted["_TextBox5"].TextSize = 14
+Converted["_TextBox5"].TextWrapped = true
+Converted["_TextBox5"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox5"].BorderSizePixel = 0
+Converted["_TextBox5"].Position = UDim2.new(0.0440003648, 0, 0.307658166, 0)
+Converted["_TextBox5"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox5"].ZIndex = 3
+Converted["_TextBox5"].Parent = Converted["_Main3"]
+
+Converted["_TextBox6"].ClearTextOnFocus = false
+Converted["_TextBox6"].Font = Enum.Font.Jura
+Converted["_TextBox6"].ShowNativeInput = false
+Converted["_TextBox6"].Text = "DIAMFASMIFAIGISHGIAHI"
+Converted["_TextBox6"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox6"].TextEditable = false
+Converted["_TextBox6"].TextScaled = true
+Converted["_TextBox6"].TextSize = 14
+Converted["_TextBox6"].TextWrapped = true
+Converted["_TextBox6"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox6"].BorderSizePixel = 0
+Converted["_TextBox6"].Position = UDim2.new(0.523999989, 0, 0.447580457, 0)
+Converted["_TextBox6"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox6"].ZIndex = 3
+Converted["_TextBox6"].Parent = Converted["_Main3"]
+
+Converted["_TextBox7"].ClearTextOnFocus = false
+Converted["_TextBox7"].Font = Enum.Font.Jura
+Converted["_TextBox7"].ShowNativeInput = false
+Converted["_TextBox7"].Text = "DF13LDMARK"
+Converted["_TextBox7"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox7"].TextEditable = false
+Converted["_TextBox7"].TextScaled = true
+Converted["_TextBox7"].TextSize = 14
+Converted["_TextBox7"].TextWrapped = true
+Converted["_TextBox7"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox7"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox7"].BorderSizePixel = 0
+Converted["_TextBox7"].Position = UDim2.new(0.0440003648, 0, 0.447502792, 0)
+Converted["_TextBox7"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox7"].ZIndex = 3
+Converted["_TextBox7"].Parent = Converted["_Main3"]
+
+Converted["_TextBox8"].ClearTextOnFocus = false
+Converted["_TextBox8"].Font = Enum.Font.Jura
+Converted["_TextBox8"].ShowNativeInput = false
+Converted["_TextBox8"].Text = "GEMS"
+Converted["_TextBox8"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox8"].TextEditable = false
+Converted["_TextBox8"].TextScaled = true
+Converted["_TextBox8"].TextSize = 14
+Converted["_TextBox8"].TextWrapped = true
+Converted["_TextBox8"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox8"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox8"].BorderSizePixel = 0
+Converted["_TextBox8"].Position = UDim2.new(0.523999989, 0, 0.587425053, 0)
+Converted["_TextBox8"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox8"].ZIndex = 3
+Converted["_TextBox8"].Parent = Converted["_Main3"]
+
+Converted["_TextBox9"].ClearTextOnFocus = false
+Converted["_TextBox9"].Font = Enum.Font.Jura
+Converted["_TextBox9"].ShowNativeInput = false
+Converted["_TextBox9"].Text = "FROST"
+Converted["_TextBox9"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox9"].TextEditable = false
+Converted["_TextBox9"].TextScaled = true
+Converted["_TextBox9"].TextSize = 14
+Converted["_TextBox9"].TextWrapped = true
+Converted["_TextBox9"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox9"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox9"].BorderSizePixel = 0
+Converted["_TextBox9"].Position = UDim2.new(0.0440003648, 0, 0.587347388, 0)
+Converted["_TextBox9"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox9"].ZIndex = 3
+Converted["_TextBox9"].Parent = Converted["_Main3"]
+
+Converted["_TextBox10"].ClearTextOnFocus = false
+Converted["_TextBox10"].Font = Enum.Font.Jura
+Converted["_TextBox10"].ShowNativeInput = false
+Converted["_TextBox10"].Text = "HYP3R"
+Converted["_TextBox10"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox10"].TextEditable = false
+Converted["_TextBox10"].TextScaled = true
+Converted["_TextBox10"].TextSize = 14
+Converted["_TextBox10"].TextWrapped = true
+Converted["_TextBox10"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox10"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox10"].BorderSizePixel = 0
+Converted["_TextBox10"].Position = UDim2.new(0.0440003648, 0, 0.720199823, 0)
+Converted["_TextBox10"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox10"].ZIndex = 3
+Converted["_TextBox10"].Parent = Converted["_Main3"]
+
+Converted["_TextBox11"].ClearTextOnFocus = false
+Converted["_TextBox11"].Font = Enum.Font.Jura
+Converted["_TextBox11"].ShowNativeInput = false
+Converted["_TextBox11"].Text = "JOHNCENA"
+Converted["_TextBox11"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox11"].TextEditable = false
+Converted["_TextBox11"].TextScaled = true
+Converted["_TextBox11"].TextSize = 14
+Converted["_TextBox11"].TextWrapped = true
+Converted["_TextBox11"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox11"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox11"].BorderSizePixel = 0
+Converted["_TextBox11"].Position = UDim2.new(0.523999989, 0, 0.720277488, 0)
+Converted["_TextBox11"].Size = UDim2.new(0.439999968, 0, 0.0882352963, 0)
+Converted["_TextBox11"].ZIndex = 3
+Converted["_TextBox11"].Parent = Converted["_Main3"]
+
+Converted["_shadowHolder3"].BackgroundTransparency = 1
+Converted["_shadowHolder3"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder3"].ZIndex = 0
+Converted["_shadowHolder3"].Name = "shadowHolder"
+Converted["_shadowHolder3"].Parent = Converted["_Main3"]
+
+Converted["_ambientShadow3"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow3"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow3"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow3"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow3"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow3"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow3"].BackgroundTransparency = 1
+Converted["_ambientShadow3"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow3"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_ambientShadow3"].ZIndex = 0
+Converted["_ambientShadow3"].Name = "ambientShadow"
+Converted["_ambientShadow3"].Parent = Converted["_shadowHolder3"]
+
+Converted["_penumbraShadow3"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow3"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow3"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow3"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow3"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow3"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow3"].BackgroundTransparency = 1
+Converted["_penumbraShadow3"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow3"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_penumbraShadow3"].ZIndex = 0
+Converted["_penumbraShadow3"].Name = "penumbraShadow"
+Converted["_penumbraShadow3"].Parent = Converted["_shadowHolder3"]
+
+Converted["_umbraShadow3"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow3"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow3"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow3"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow3"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow3"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow3"].BackgroundTransparency = 1
+Converted["_umbraShadow3"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow3"].Size = UDim2.new(1.00800002, 0, 1.01176476, 0)
+Converted["_umbraShadow3"].ZIndex = 0
+Converted["_umbraShadow3"].Name = "umbraShadow"
+Converted["_umbraShadow3"].Parent = Converted["_shadowHolder3"]
+
+Converted["_More1"].Font = Enum.Font.Unknown
+Converted["_More1"].Text = "MORE"
+Converted["_More1"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_More1"].TextScaled = true
+Converted["_More1"].TextSize = 14
+Converted["_More1"].TextWrapped = true
+Converted["_More1"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_More1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_More1"].BorderSizePixel = 0
+Converted["_More1"].Position = UDim2.new(0.388000011, 0, 0.86500001, 0)
+Converted["_More1"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_More1"].ZIndex = 3
+Converted["_More1"].Name = "More"
+Converted["_More1"].Parent = Converted["_Main3"]
+
+Converted["_Main4"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Main4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main4"].BorderSizePixel = 0
+Converted["_Main4"].Position = UDim2.new(-0.00274719228, 0, -0.011836946, 0)
+Converted["_Main4"].Size = UDim2.new(1.00000012, 0, 0.999999881, 0)
+Converted["_Main4"].Visible = false
+Converted["_Main4"].ZIndex = 4
+Converted["_Main4"].Name = "Main4"
+Converted["_Main4"].Parent = Converted["_Main3"]
+
+Converted["_shadowHolder4"].BackgroundTransparency = 1
+Converted["_shadowHolder4"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder4"].ZIndex = 3
+Converted["_shadowHolder4"].Name = "shadowHolder"
+Converted["_shadowHolder4"].Parent = Converted["_Main4"]
+
+Converted["_umbraShadow4"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow4"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow4"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow4"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow4"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow4"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow4"].BackgroundTransparency = 1
+Converted["_umbraShadow4"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow4"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_umbraShadow4"].ZIndex = 3
+Converted["_umbraShadow4"].Name = "umbraShadow"
+Converted["_umbraShadow4"].Parent = Converted["_shadowHolder4"]
+
+Converted["_penumbraShadow4"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow4"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow4"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow4"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow4"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow4"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow4"].BackgroundTransparency = 1
+Converted["_penumbraShadow4"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow4"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_penumbraShadow4"].ZIndex = 3
+Converted["_penumbraShadow4"].Name = "penumbraShadow"
+Converted["_penumbraShadow4"].Parent = Converted["_shadowHolder4"]
+
+Converted["_ambientShadow4"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow4"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow4"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow4"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow4"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow4"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow4"].BackgroundTransparency = 1
+Converted["_ambientShadow4"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow4"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_ambientShadow4"].ZIndex = 3
+Converted["_ambientShadow4"].Name = "ambientShadow"
+Converted["_ambientShadow4"].Parent = Converted["_shadowHolder4"]
+
+Converted["_TextBox12"].ClearTextOnFocus = false
+Converted["_TextBox12"].Font = Enum.Font.Jura
+Converted["_TextBox12"].ShowNativeInput = false
+Converted["_TextBox12"].Text = "NAPK1NNAT3"
+Converted["_TextBox12"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox12"].TextEditable = false
+Converted["_TextBox12"].TextScaled = true
+Converted["_TextBox12"].TextSize = 14
+Converted["_TextBox12"].TextWrapped = true
+Converted["_TextBox12"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox12"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox12"].BorderSizePixel = 0
+Converted["_TextBox12"].Position = UDim2.new(0.0440003648, 0, 0.0279689245, 0)
+Converted["_TextBox12"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox12"].ZIndex = 3
+Converted["_TextBox12"].Parent = Converted["_Main4"]
+
+Converted["_TextBox13"].ClearTextOnFocus = false
+Converted["_TextBox13"].Font = Enum.Font.Jura
+Converted["_TextBox13"].ShowNativeInput = false
+Converted["_TextBox13"].Text = "ONE"
+Converted["_TextBox13"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox13"].TextEditable = false
+Converted["_TextBox13"].TextScaled = true
+Converted["_TextBox13"].TextSize = 14
+Converted["_TextBox13"].TextWrapped = true
+Converted["_TextBox13"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox13"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox13"].BorderSizePixel = 0
+Converted["_TextBox13"].Position = UDim2.new(0.523999989, 0, 0.0280465968, 0)
+Converted["_TextBox13"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox13"].ZIndex = 3
+Converted["_TextBox13"].Parent = Converted["_Main4"]
+
+Converted["_TextBox14"].ClearTextOnFocus = false
+Converted["_TextBox14"].Font = Enum.Font.Jura
+Converted["_TextBox14"].ShowNativeInput = false
+Converted["_TextBox14"].Text = "R!@@@"
+Converted["_TextBox14"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox14"].TextEditable = false
+Converted["_TextBox14"].TextScaled = true
+Converted["_TextBox14"].TextSize = 14
+Converted["_TextBox14"].TextWrapped = true
+Converted["_TextBox14"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox14"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox14"].BorderSizePixel = 0
+Converted["_TextBox14"].Position = UDim2.new(0.523999989, 0, 0.167891219, 0)
+Converted["_TextBox14"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox14"].ZIndex = 3
+Converted["_TextBox14"].Parent = Converted["_Main4"]
+
+Converted["_TextBox15"].ClearTextOnFocus = false
+Converted["_TextBox15"].Font = Enum.Font.Jura
+Converted["_TextBox15"].ShowNativeInput = false
+Converted["_TextBox15"].Text = "P0K3D1G3R"
+Converted["_TextBox15"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox15"].TextEditable = false
+Converted["_TextBox15"].TextScaled = true
+Converted["_TextBox15"].TextSize = 14
+Converted["_TextBox15"].TextWrapped = true
+Converted["_TextBox15"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox15"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox15"].BorderSizePixel = 0
+Converted["_TextBox15"].Position = UDim2.new(0.0440003648, 0, 0.16781354, 0)
+Converted["_TextBox15"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox15"].ZIndex = 3
+Converted["_TextBox15"].Parent = Converted["_Main4"]
+
+Converted["_TextBox16"].ClearTextOnFocus = false
+Converted["_TextBox16"].Font = Enum.Font.Jura
+Converted["_TextBox16"].ShowNativeInput = false
+Converted["_TextBox16"].Text = "SGC"
+Converted["_TextBox16"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox16"].TextEditable = false
+Converted["_TextBox16"].TextScaled = true
+Converted["_TextBox16"].TextSize = 14
+Converted["_TextBox16"].TextWrapped = true
+Converted["_TextBox16"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox16"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox16"].BorderSizePixel = 0
+Converted["_TextBox16"].Position = UDim2.new(0.523999989, 0, 0.307735831, 0)
+Converted["_TextBox16"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox16"].ZIndex = 3
+Converted["_TextBox16"].Parent = Converted["_Main4"]
+
+Converted["_TextBox17"].ClearTextOnFocus = false
+Converted["_TextBox17"].Font = Enum.Font.Jura
+Converted["_TextBox17"].ShowNativeInput = false
+Converted["_TextBox17"].Text = "S33D3NG"
+Converted["_TextBox17"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox17"].TextEditable = false
+Converted["_TextBox17"].TextScaled = true
+Converted["_TextBox17"].TextSize = 14
+Converted["_TextBox17"].TextWrapped = true
+Converted["_TextBox17"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox17"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox17"].BorderSizePixel = 0
+Converted["_TextBox17"].Position = UDim2.new(0.0440003648, 0, 0.307658166, 0)
+Converted["_TextBox17"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox17"].ZIndex = 3
+Converted["_TextBox17"].Parent = Converted["_Main4"]
+
+Converted["_TextBox18"].ClearTextOnFocus = false
+Converted["_TextBox18"].Font = Enum.Font.Jura
+Converted["_TextBox18"].ShowNativeInput = false
+Converted["_TextBox18"].Text = "TH3M0NK3Y"
+Converted["_TextBox18"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox18"].TextEditable = false
+Converted["_TextBox18"].TextScaled = true
+Converted["_TextBox18"].TextSize = 14
+Converted["_TextBox18"].TextWrapped = true
+Converted["_TextBox18"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox18"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox18"].BorderSizePixel = 0
+Converted["_TextBox18"].Position = UDim2.new(0.523999989, 0, 0.447580457, 0)
+Converted["_TextBox18"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox18"].ZIndex = 3
+Converted["_TextBox18"].Parent = Converted["_Main4"]
+
+Converted["_TextBox19"].ClearTextOnFocus = false
+Converted["_TextBox19"].Font = Enum.Font.Jura
+Converted["_TextBox19"].ShowNativeInput = false
+Converted["_TextBox19"].Text = "T0FUU"
+Converted["_TextBox19"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox19"].TextEditable = false
+Converted["_TextBox19"].TextScaled = true
+Converted["_TextBox19"].TextSize = 14
+Converted["_TextBox19"].TextWrapped = true
+Converted["_TextBox19"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox19"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox19"].BorderSizePixel = 0
+Converted["_TextBox19"].Position = UDim2.new(0.0440003648, 0, 0.447502792, 0)
+Converted["_TextBox19"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox19"].ZIndex = 3
+Converted["_TextBox19"].Parent = Converted["_Main4"]
+
+Converted["_TextBox20"].ClearTextOnFocus = false
+Converted["_TextBox20"].Font = Enum.Font.Jura
+Converted["_TextBox20"].ShowNativeInput = false
+Converted["_TextBox20"].Text = "TW11ST3D"
+Converted["_TextBox20"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox20"].TextEditable = false
+Converted["_TextBox20"].TextScaled = true
+Converted["_TextBox20"].TextSize = 14
+Converted["_TextBox20"].TextWrapped = true
+Converted["_TextBox20"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox20"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox20"].BorderSizePixel = 0
+Converted["_TextBox20"].Position = UDim2.new(0.0440003648, 0, 0.587347388, 0)
+Converted["_TextBox20"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox20"].ZIndex = 3
+Converted["_TextBox20"].Parent = Converted["_Main4"]
+
+Converted["_TextBox21"].ClearTextOnFocus = false
+Converted["_TextBox21"].Font = Enum.Font.Jura
+Converted["_TextBox21"].ShowNativeInput = false
+Converted["_TextBox21"].Text = "TWEET"
+Converted["_TextBox21"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox21"].TextEditable = false
+Converted["_TextBox21"].TextScaled = true
+Converted["_TextBox21"].TextSize = 14
+Converted["_TextBox21"].TextWrapped = true
+Converted["_TextBox21"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox21"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox21"].BorderSizePixel = 0
+Converted["_TextBox21"].Position = UDim2.new(0.523999989, 0, 0.587425053, 0)
+Converted["_TextBox21"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox21"].ZIndex = 3
+Converted["_TextBox21"].Parent = Converted["_Main4"]
+
+Converted["_TextBox22"].ClearTextOnFocus = false
+Converted["_TextBox22"].Font = Enum.Font.Jura
+Converted["_TextBox22"].ShowNativeInput = false
+Converted["_TextBox22"].Text = "VIRTUAL"
+Converted["_TextBox22"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox22"].TextEditable = false
+Converted["_TextBox22"].TextScaled = true
+Converted["_TextBox22"].TextSize = 14
+Converted["_TextBox22"].TextWrapped = true
+Converted["_TextBox22"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox22"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox22"].BorderSizePixel = 0
+Converted["_TextBox22"].Position = UDim2.new(0.0440003648, 0, 0.720199823, 0)
+Converted["_TextBox22"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox22"].ZIndex = 3
+Converted["_TextBox22"].Parent = Converted["_Main4"]
+
+Converted["_TextBox23"].ClearTextOnFocus = false
+Converted["_TextBox23"].Font = Enum.Font.Jura
+Converted["_TextBox23"].ShowNativeInput = false
+Converted["_TextBox23"].Text = "XXGODLY"
+Converted["_TextBox23"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox23"].TextEditable = false
+Converted["_TextBox23"].TextScaled = true
+Converted["_TextBox23"].TextSize = 14
+Converted["_TextBox23"].TextWrapped = true
+Converted["_TextBox23"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox23"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox23"].BorderSizePixel = 0
+Converted["_TextBox23"].Position = UDim2.new(0.523999989, 0, 0.720277488, 0)
+Converted["_TextBox23"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox23"].ZIndex = 3
+Converted["_TextBox23"].Parent = Converted["_Main4"]
+
+Converted["_TextBox24"].ClearTextOnFocus = false
+Converted["_TextBox24"].Font = Enum.Font.Jura
+Converted["_TextBox24"].ShowNativeInput = false
+Converted["_TextBox24"].Text = "MMSAW"
+Converted["_TextBox24"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox24"].TextEditable = false
+Converted["_TextBox24"].TextScaled = true
+Converted["_TextBox24"].TextSize = 14
+Converted["_TextBox24"].TextWrapped = true
+Converted["_TextBox24"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox24"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox24"].BorderSizePixel = 0
+Converted["_TextBox24"].Position = UDim2.new(0.523999989, 0, 0.860122085, 0)
+Converted["_TextBox24"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox24"].ZIndex = 3
+Converted["_TextBox24"].Parent = Converted["_Main4"]
+
+Converted["_TextBox25"].ClearTextOnFocus = false
+Converted["_TextBox25"].Font = Enum.Font.Jura
+Converted["_TextBox25"].ShowNativeInput = false
+Converted["_TextBox25"].Text = "LUCKY"
+Converted["_TextBox25"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextBox25"].TextEditable = false
+Converted["_TextBox25"].TextScaled = true
+Converted["_TextBox25"].TextSize = 14
+Converted["_TextBox25"].TextWrapped = true
+Converted["_TextBox25"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextBox25"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextBox25"].BorderSizePixel = 0
+Converted["_TextBox25"].Position = UDim2.new(0.0440003648, 0, 0.86004442, 0)
+Converted["_TextBox25"].Size = UDim2.new(0.439999908, 0, 0.0882353038, 0)
+Converted["_TextBox25"].ZIndex = 3
+Converted["_TextBox25"].Parent = Converted["_Main4"]
+
+Converted["_Back1"].Font = Enum.Font.Unknown
+Converted["_Back1"].Text = "BACK"
+Converted["_Back1"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Back1"].TextScaled = true
+Converted["_Back1"].TextSize = 14
+Converted["_Back1"].TextWrapped = true
+Converted["_Back1"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Back1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Back1"].BorderSizePixel = 0
+Converted["_Back1"].Position = UDim2.new(0.0439999998, 0, 1.01699996, 0)
+Converted["_Back1"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_Back1"].ZIndex = 4
+Converted["_Back1"].Name = "Back"
+Converted["_Back1"].Parent = Converted["_Main4"]
+
+Converted["_Back2"].Font = Enum.Font.Unknown
+Converted["_Back2"].Text = "BACK"
+Converted["_Back2"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Back2"].TextScaled = true
+Converted["_Back2"].TextSize = 14
+Converted["_Back2"].TextWrapped = true
+Converted["_Back2"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Back2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Back2"].BorderSizePixel = 0
+Converted["_Back2"].Position = UDim2.new(0.099999994, 0, 0.86499989, 0)
+Converted["_Back2"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_Back2"].ZIndex = 3
+Converted["_Back2"].Name = "Back"
+Converted["_Back2"].Parent = Converted["_Main3"]
+
+Converted["_Main5"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Main5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main5"].BorderSizePixel = 0
+Converted["_Main5"].Position = UDim2.new(-0.00274719228, 0, 0.00214753998, 0)
+Converted["_Main5"].Size = UDim2.new(1.00000012, 0, 0.999999881, 0)
+Converted["_Main5"].Visible = false
+Converted["_Main5"].ZIndex = 5
+Converted["_Main5"].Name = "Main5"
+Converted["_Main5"].Parent = Converted["_Main"]
+
+Converted["_shadowHolder5"].BackgroundTransparency = 1
+Converted["_shadowHolder5"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder5"].ZIndex = 4
+Converted["_shadowHolder5"].Name = "shadowHolder"
+Converted["_shadowHolder5"].Parent = Converted["_Main5"]
+
+Converted["_umbraShadow5"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow5"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow5"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow5"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow5"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow5"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow5"].BackgroundTransparency = 1
+Converted["_umbraShadow5"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow5"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_umbraShadow5"].ZIndex = 4
+Converted["_umbraShadow5"].Name = "umbraShadow"
+Converted["_umbraShadow5"].Parent = Converted["_shadowHolder5"]
+
+Converted["_penumbraShadow5"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow5"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow5"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow5"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow5"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow5"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow5"].BackgroundTransparency = 1
+Converted["_penumbraShadow5"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow5"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_penumbraShadow5"].ZIndex = 4
+Converted["_penumbraShadow5"].Name = "penumbraShadow"
+Converted["_penumbraShadow5"].Parent = Converted["_shadowHolder5"]
+
+Converted["_ambientShadow5"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow5"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow5"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow5"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow5"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow5"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow5"].BackgroundTransparency = 1
+Converted["_ambientShadow5"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow5"].Size = UDim2.new(1.00800002, 0, 1.01398444, 0)
+Converted["_ambientShadow5"].ZIndex = 4
+Converted["_ambientShadow5"].Name = "ambientShadow"
+Converted["_ambientShadow5"].Parent = Converted["_shadowHolder5"]
+
+Converted["_LobbyTeleport"].Font = Enum.Font.Highway
+Converted["_LobbyTeleport"].Text = "Lobby Teleport"
+Converted["_LobbyTeleport"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_LobbyTeleport"].TextScaled = true
+Converted["_LobbyTeleport"].TextSize = 14
+Converted["_LobbyTeleport"].TextWrapped = true
+Converted["_LobbyTeleport"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_LobbyTeleport"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_LobbyTeleport"].BorderSizePixel = 0
+Converted["_LobbyTeleport"].Position = UDim2.new(0.0799999982, 0, 0.117647059, 0)
+Converted["_LobbyTeleport"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_LobbyTeleport"].ZIndex = 5
+Converted["_LobbyTeleport"].Name = "LobbyTeleport"
+Converted["_LobbyTeleport"].Parent = Converted["_Main5"]
+
+Converted["_RemoveGameHopper"].Font = Enum.Font.Highway
+Converted["_RemoveGameHopper"].Text = "Remove Game Hopper"
+Converted["_RemoveGameHopper"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_RemoveGameHopper"].TextScaled = true
+Converted["_RemoveGameHopper"].TextSize = 14
+Converted["_RemoveGameHopper"].TextWrapped = true
+Converted["_RemoveGameHopper"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_RemoveGameHopper"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_RemoveGameHopper"].BorderSizePixel = 0
+Converted["_RemoveGameHopper"].Position = UDim2.new(0.519999981, 0, 0.117647059, 0)
+Converted["_RemoveGameHopper"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_RemoveGameHopper"].ZIndex = 5
+Converted["_RemoveGameHopper"].Name = "RemoveGameHopper"
+Converted["_RemoveGameHopper"].Parent = Converted["_Main5"]
+
+Converted["_Back3"].Font = Enum.Font.Unknown
+Converted["_Back3"].Text = "BACK"
+Converted["_Back3"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Back3"].TextScaled = true
+Converted["_Back3"].TextSize = 14
+Converted["_Back3"].TextWrapped = true
+Converted["_Back3"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Back3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Back3"].BorderSizePixel = 0
+Converted["_Back3"].Position = UDim2.new(0.39199999, 0, 0.800000012, 0)
+Converted["_Back3"].Size = UDim2.new(0.219999984, 0, 0.0882352963, 0)
+Converted["_Back3"].ZIndex = 5
+Converted["_Back3"].Name = "Back"
+Converted["_Back3"].Parent = Converted["_Main5"]
+
+Converted["_EndCurrentRound"].Font = Enum.Font.Highway
+Converted["_EndCurrentRound"].Text = "End Current Round"
+Converted["_EndCurrentRound"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_EndCurrentRound"].TextScaled = true
+Converted["_EndCurrentRound"].TextSize = 14
+Converted["_EndCurrentRound"].TextWrapped = true
+Converted["_EndCurrentRound"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_EndCurrentRound"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_EndCurrentRound"].BorderSizePixel = 0
+Converted["_EndCurrentRound"].Position = UDim2.new(0.0799999982, 0, 0.324000001, 0)
+Converted["_EndCurrentRound"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_EndCurrentRound"].ZIndex = 5
+Converted["_EndCurrentRound"].Name = "EndCurrentRound"
+Converted["_EndCurrentRound"].Parent = Converted["_Main5"]
+
+Converted["_CoinsCollector"].Font = Enum.Font.Highway
+Converted["_CoinsCollector"].Text = "Coins Collector"
+Converted["_CoinsCollector"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_CoinsCollector"].TextScaled = true
+Converted["_CoinsCollector"].TextSize = 14
+Converted["_CoinsCollector"].TextWrapped = true
+Converted["_CoinsCollector"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_CoinsCollector"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_CoinsCollector"].BorderSizePixel = 0
+Converted["_CoinsCollector"].Position = UDim2.new(0.519999981, 0, 0.323999912, 0)
+Converted["_CoinsCollector"].Size = UDim2.new(0.399999976, 0, 0.14705883, 0)
+Converted["_CoinsCollector"].ZIndex = 5
+Converted["_CoinsCollector"].Name = "CoinsCollector"
+Converted["_CoinsCollector"].Parent = Converted["_Main5"]
+
+Converted["_MoreV2"].Font = Enum.Font.Unknown
+Converted["_MoreV2"].Text = "MORE v2"
+Converted["_MoreV2"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_MoreV2"].TextScaled = true
+Converted["_MoreV2"].TextSize = 14
+Converted["_MoreV2"].TextWrapped = true
+Converted["_MoreV2"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_MoreV2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_MoreV2"].BorderSizePixel = 0
+Converted["_MoreV2"].Position = UDim2.new(0.239999995, 0, 0.860000014, 0)
+Converted["_MoreV2"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_MoreV2"].Name = "MoreV2"
+Converted["_MoreV2"].Parent = Converted["_Main"]
+
+Converted["_Destroy"].Font = Enum.Font.Unknown
+Converted["_Destroy"].Text = "DESTROY"
+Converted["_Destroy"].TextColor3 = Color3.fromRGB(170.0000050663948, 255, 255)
+Converted["_Destroy"].TextScaled = true
+Converted["_Destroy"].TextSize = 14
+Converted["_Destroy"].TextWrapped = true
+Converted["_Destroy"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Destroy"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Destroy"].BorderSizePixel = 0
+Converted["_Destroy"].Position = UDim2.new(0.537, 0, 0.860000014, 0)
+Converted["_Destroy"].Size = UDim2.new(0.220000014, 0, 0.0882352889, 0)
+Converted["_Destroy"].Name = "Destroy"
+Converted["_Destroy"].Parent = Converted["_Main"]
+
+Converted["_Toggler"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_Toggler"].BackgroundTransparency = 1
+Converted["_Toggler"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggler"].BorderSizePixel = 0
+Converted["_Toggler"].Position = UDim2.new(0.530478418, 0, 0.821111083, 0)
+Converted["_Toggler"].Size = UDim2.new(0.123304561, 0, 0.0476190485, 0)
+Converted["_Toggler"].Name = "Toggler"
+Converted["_Toggler"].Parent = Converted["_GoodBoi"]
+
+Converted["_TextButton"].Font = Enum.Font.Highway
+Converted["_TextButton"].Text = "OPEN"
+Converted["_TextButton"].TextColor3 = Color3.fromRGB(255, 85.0000025331974, 0)
+Converted["_TextButton"].TextScaled = true
+Converted["_TextButton"].TextSize = 14
+Converted["_TextButton"].TextWrapped = true
+Converted["_TextButton"].BackgroundColor3 = Color3.fromRGB(55.000004321336746, 55.000004321336746, 55.000004321336746)
+Converted["_TextButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextButton"].BorderSizePixel = 0
+Converted["_TextButton"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_TextButton"].ZIndex = 2
+Converted["_TextButton"].Parent = Converted["_Toggler"]
+
+Converted["_shadowHolder6"].BackgroundTransparency = 1
+Converted["_shadowHolder6"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_shadowHolder6"].ZIndex = 0
+Converted["_shadowHolder6"].Name = "shadowHolder"
+Converted["_shadowHolder6"].Parent = Converted["_TextButton"]
+
+Converted["_ambientShadow6"].Image = "rbxassetid://1316045217"
+Converted["_ambientShadow6"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ambientShadow6"].ImageTransparency = 0.8799999952316284
+Converted["_ambientShadow6"].ScaleType = Enum.ScaleType.Slice
+Converted["_ambientShadow6"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_ambientShadow6"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_ambientShadow6"].BackgroundTransparency = 1
+Converted["_ambientShadow6"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_ambientShadow6"].Size = UDim2.new(1.01999998, 0, 1.06666672, 0)
+Converted["_ambientShadow6"].ZIndex = 0
+Converted["_ambientShadow6"].Name = "ambientShadow"
+Converted["_ambientShadow6"].Parent = Converted["_shadowHolder6"]
+
+Converted["_penumbraShadow6"].Image = "rbxassetid://1316045217"
+Converted["_penumbraShadow6"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_penumbraShadow6"].ImageTransparency = 0.8799999952316284
+Converted["_penumbraShadow6"].ScaleType = Enum.ScaleType.Slice
+Converted["_penumbraShadow6"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_penumbraShadow6"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_penumbraShadow6"].BackgroundTransparency = 1
+Converted["_penumbraShadow6"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_penumbraShadow6"].Size = UDim2.new(1.01999998, 0, 1.06666672, 0)
+Converted["_penumbraShadow6"].ZIndex = 0
+Converted["_penumbraShadow6"].Name = "penumbraShadow"
+Converted["_penumbraShadow6"].Parent = Converted["_shadowHolder6"]
+
+Converted["_umbraShadow6"].Image = "rbxassetid://1316045217"
+Converted["_umbraShadow6"].ImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_umbraShadow6"].ImageTransparency = 0.8600000143051147
+Converted["_umbraShadow6"].ScaleType = Enum.ScaleType.Slice
+Converted["_umbraShadow6"].SliceCenter = Rect.new(10, 10, 118, 118)
+Converted["_umbraShadow6"].AnchorPoint = Vector2.new(0.5, 0.5)
+Converted["_umbraShadow6"].BackgroundTransparency = 1
+Converted["_umbraShadow6"].Position = UDim2.new(0.5, 0, 0.5, 0)
+Converted["_umbraShadow6"].Size = UDim2.new(1.01999998, 0, 1.06666672, 0)
+Converted["_umbraShadow6"].ZIndex = 0
+Converted["_umbraShadow6"].Name = "umbraShadow"
+Converted["_umbraShadow6"].Parent = Converted["_shadowHolder6"]
+
+Converted["_GoodBoi"].Parent = game.CoreGui
+
+local fake_module_scripts = {}
+
+local function MNVGC_fake_script() -- Fake Script: Workspace.GoodBoi.SoundSystem
+    local script = Instance.new("LocalScript")
+    script.Name = "SoundSystem"
+    script.Parent = Converted["_GoodBoi"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local function playSound(sound)
+		script.Parent[sound]:Play()
+	end
+	
+	for _, v in pairs(script.Parent:GetDescendants()) do
+		if v:IsA('TextButton') or v:IsA('ImageButton') then
+			v.MouseEnter:Connect(function()
+				playSound("hovers")
+			end)
+	
+			v.MouseLeave:Connect(function()
+				playSound("leaves")
+			end)
+	
+			v.MouseButton1Click:Connect(function()
+				playSound("clicking")
+			end)
+		end
+	end
+end
+local function TLORJV_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.UnmuteGame.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_UnmuteGame"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local Mute = false
+	script.Parent.MouseButton1Click:Connect(function()
+		Mute = false
+	end)
+end
+local function UTEIHGI_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.Stop.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Stop"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		Active = false
+	end)
+end
+local function LBRBX_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.Wait.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Wait"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	
+	local textBox = script.Parent
+	
+	local function restrictInput(input)
+		local filteredInput = input:gsub("[^%d]", "")
+		textBox.Text = filteredInput
+	end
+	
+	textBox.InputChanged:Connect(function(input)
+		restrictInput(input)
+	end)
+	
+end
+local function VMERNP_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.KillSoundService.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_KillSoundService"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local Active = true
+	local Wait = script.Parent.Parent.Wait
+	script.Parent.MouseButton1Click:Connect(function()
+		Active = true
+		while Active == true do
+			local StringValue = Wait.Text
+			wait(StringValue)
+			for _, sound in next, workspace:GetDescendants() do
+				if sound:IsA("Sound") then
+					sound:Play()
+				end
+			end
+		end
+	end)
+end
+local function AQJJAGT_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.AnnoyingSound.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_AnnoyingSound"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for _, sound in next, workspace:GetDescendants() do
+			if sound:IsA("Sound") then
+				sound:Play()
+			end
+		end
+	end)
+end
+local function MZUXYRI_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.MuteGame.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_MuteGame"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		Mute = true
+		while Mute == true do 
+			wait()
+			for _, sound in next, workspace:GetDescendants() do
+				if sound:IsA("Sound") then
+					sound:Stop()
+				end
+			end
+		end
+	end)
+end
+local function TBUTV_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.Back.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Back"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Visible = true
+	end)
+end
+local function GYNBADK_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.UnboxAllCrates.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_UnboxAllCrates"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local char = game.Players.LocalPlayer.Character
+		repeat
+			local args = {
+				[1] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #1"),
+				[2] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #2"),
+				[3] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #3"),
+				[4] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("RevolverSkins"):WaitForChild("Revolver Box #4"),
+				[5] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #1"),
+				[6] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #2"),
+				[7] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #3"),
+				[8] = game.ReplicatedStorage:WaitForChild("ShopEntries"):WaitForChild("KnifeSkins"):WaitForChild("Knife Box #4")
+			}
+	
+			game.ReplicatedStorage:WaitForChild("Interactions"):WaitForChild("Server"):WaitForChild("BuyShopItem"):InvokeServer(unpack(args))
+		until char.Humanoid.Health == 0
+	
+	end)
+end
+local function KDFXN_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main2.Aimbot.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Aimbot"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.WRDAimbotTeamCheck = false
+		_G.WRDAimbotBypass = false
+		_G.WRDAimBotWallcheck = false
+	
+		local SynapseXen_iiilliIiI=select;local SynapseXen_IIIIillIIIliIl=string.byte;local SynapseXen_iIiIlIillIlliili=string.sub;local SynapseXen_iillI=string.char;local SynapseXen_iIiiiIIiIlllIliIi=type;local SynapseXen_iIIIIlIliiliIiIll=table.concat;local unpack=unpack;local setmetatable=setmetatable;local pcall=pcall;local SynapseXen_lIilIiiIiIiIliIi,SynapseXen_iiililIlIiiliiillIlI,SynapseXen_lilIiIlliIi,SynapseXen_IIIiiiiiilIiiiilii;if bit and bit.bxor then SynapseXen_lIilIiiIiIiIliIi=bit.bxor;SynapseXen_iiililIlIiiliiillIlI=function(SynapseXen_iiiii,SynapseXen_iiiiIllill)local SynapseXen_ilIiiiillII=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iiiii,SynapseXen_iiiiIllill)if SynapseXen_ilIiiiillII<0 then SynapseXen_ilIiiiillII=4294967296+SynapseXen_ilIiiiillII end;return SynapseXen_ilIiiiillII end else SynapseXen_lIilIiiIiIiIliIi=function(SynapseXen_iiiii,SynapseXen_iiiiIllill)local SynapseXen_IilliIliliI=function(SynapseXen_llliiiIIil,SynapseXen_lllli)return SynapseXen_llliiiIIil%(SynapseXen_lllli*2)>=SynapseXen_lllli end;local SynapseXen_lIiiilIlIiiIIlII=0;for SynapseXen_lllilIIIllililIIlIi=0,31 do SynapseXen_lIiiilIlIiiIIlII=SynapseXen_lIiiilIlIiiIIlII+(SynapseXen_IilliIliliI(SynapseXen_iiiii,2^SynapseXen_lllilIIIllililIIlIi)~=SynapseXen_IilliIliliI(SynapseXen_iiiiIllill,2^SynapseXen_lllilIIIllililIIlIi)and 2^SynapseXen_lllilIIIllililIIlIi or 0)end;return SynapseXen_lIiiilIlIiiIIlII end;SynapseXen_iiililIlIiiliiillIlI=SynapseXen_lIilIiiIiIiIliIi end;SynapseXen_lilIiIlliIi=function(SynapseXen_lIiIIlIIliiiiliIiIiI,SynapseXen_lIliIilllllIIIIli,SynapseXen_iIllIiiliiliI)return(SynapseXen_lIiIIlIIliiiiliIiIiI+SynapseXen_lIliIilllllIIIIli)%SynapseXen_iIllIiiliiliI end;SynapseXen_IIIiiiiiilIiiiilii=function(SynapseXen_lIiIIlIIliiiiliIiIiI,SynapseXen_lIliIilllllIIIIli,SynapseXen_iIllIiiliiliI)return(SynapseXen_lIiIIlIIliiiiliIiIiI-SynapseXen_lIliIilllllIIIIli)%SynapseXen_iIllIiiliiliI end;local function SynapseXen_iIIIIIlIiillii(SynapseXen_ilIiiiillII)if SynapseXen_ilIiiiillII<0 then SynapseXen_ilIiiiillII=4294967296+SynapseXen_ilIiiiillII end;return SynapseXen_ilIiiiillII end;local getfenv=getfenv;if not getfenv then getfenv=function()return _ENV end end;local SynapseXen_iillIlliII={}local SynapseXen_ilIllllilIilIIIIlI={}local SynapseXen_IIiiliIilIiiiI;local SynapseXen_liIiiliIIiiiillIiIi;local SynapseXen_lIIlIilIIiIliIIillIl={}local SynapseXen_iiIllilillIIIiiiIl={}for SynapseXen_lllilIIIllililIIlIi=0,255 do local SynapseXen_illIlllll,SynapseXen_IIIillIlIIlilIl=SynapseXen_iillI(SynapseXen_lllilIIIllililIIlIi),SynapseXen_iillI(SynapseXen_lllilIIIllililIIlIi,0)SynapseXen_lIIlIilIIiIliIIillIl[SynapseXen_illIlllll]=SynapseXen_IIIillIlIIlilIl;SynapseXen_iiIllilillIIIiiiIl[SynapseXen_IIIillIlIIlilIl]=SynapseXen_illIlllll end;local function SynapseXen_iIIliiIIIiIll(SynapseXen_illiiIiIll,SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi)if SynapseXen_ilIlIIiIlllIIiiiII>=256 then SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi=0,SynapseXen_lIlIliilIIi+1;if SynapseXen_lIlIliilIIi>=256 then SynapseXen_lliIlIIIilIIliIIiII={}SynapseXen_lIlIliilIIi=1 end end;SynapseXen_lliIlIIIilIIliIIiII[SynapseXen_iillI(SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi)]=SynapseXen_illiiIiIll;SynapseXen_ilIlIIiIlllIIiiiII=SynapseXen_ilIlIIiIlllIIiiiII+1;return SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi end;local function SynapseXen_IiIiII(SynapseXen_ilIlIIiIillIili)local function SynapseXen_lliIllIiil(SynapseXen_lIIlIiIIlililIIIilll)local SynapseXen_lIlIliilIIi='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'SynapseXen_lIIlIiIIlililIIIilll=string.gsub(SynapseXen_lIIlIiIIlililIIIilll,'[^'..SynapseXen_lIlIliilIIi..'=]','')return SynapseXen_lIIlIiIIlililIIIilll:gsub('.',function(SynapseXen_lIiIIlIIliiiiliIiIiI)if SynapseXen_lIiIIlIIliiiiliIiIiI=='='then return''end;local SynapseXen_IliIIIiII,SynapseXen_iIiII='',SynapseXen_lIlIliilIIi:find(SynapseXen_lIiIIlIIliiiiliIiIiI)-1;for SynapseXen_lllilIIIllililIIlIi=6,1,-1 do SynapseXen_IliIIIiII=SynapseXen_IliIIIiII..(SynapseXen_iIiII%2^SynapseXen_lllilIIIllililIIlIi-SynapseXen_iIiII%2^(SynapseXen_lllilIIIllililIIlIi-1)>0 and'1'or'0')end;return SynapseXen_IliIIIiII end):gsub('%d%d%d?%d?%d?%d?%d?%d?',function(SynapseXen_lIiIIlIIliiiiliIiIiI)if#SynapseXen_lIiIIlIIliiiiliIiIiI~=8 then return''end;local SynapseXen_lIliIllIl=0;for SynapseXen_lllilIIIllililIIlIi=1,8 do SynapseXen_lIliIllIl=SynapseXen_lIliIllIl+(SynapseXen_lIiIIlIIliiiiliIiIiI:sub(SynapseXen_lllilIIIllililIIlIi,SynapseXen_lllilIIIllililIIlIi)=='1'and 2^(8-SynapseXen_lllilIIIllililIIlIi)or 0)end;return string.char(SynapseXen_lIliIllIl)end)end;SynapseXen_ilIlIIiIillIili=SynapseXen_lliIllIiil(SynapseXen_ilIlIIiIillIili)local SynapseXen_llIlllIlIilII=SynapseXen_iIiIlIillIlliili(SynapseXen_ilIlIIiIillIili,1,1)if SynapseXen_llIlllIlIilII=="u"then return SynapseXen_iIiIlIillIlliili(SynapseXen_ilIlIIiIillIili,2)elseif SynapseXen_llIlllIlIilII~="c"then error("Synapse Xen - Failed to verify bytecode. Please make sure your Lua implementation supports non-null terminated strings.")end;SynapseXen_ilIlIIiIillIili=SynapseXen_iIiIlIillIlliili(SynapseXen_ilIlIIiIillIili,2)local SynapseXen_iIiIili=#SynapseXen_ilIlIIiIillIili;local SynapseXen_lliIlIIIilIIliIIiII={}local SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi=0,1;local SynapseXen_liiIi={}local SynapseXen_ilIiiiillII=1;local SynapseXen_lIlllilliIIliiIIiI=SynapseXen_iIiIlIillIlliili(SynapseXen_ilIlIIiIillIili,1,2)SynapseXen_liiIi[SynapseXen_ilIiiiillII]=SynapseXen_iiIllilillIIIiiiIl[SynapseXen_lIlllilliIIliiIIiI]or SynapseXen_lliIlIIIilIIliIIiII[SynapseXen_lIlllilliIIliiIIiI]SynapseXen_ilIiiiillII=SynapseXen_ilIiiiillII+1;for SynapseXen_lllilIIIllililIIlIi=3,SynapseXen_iIiIili,2 do local SynapseXen_ilIIiilllilII=SynapseXen_iIiIlIillIlliili(SynapseXen_ilIlIIiIillIili,SynapseXen_lllilIIIllililIIlIi,SynapseXen_lllilIIIllililIIlIi+1)local SynapseXen_liIliliIlIIIillIl=SynapseXen_iiIllilillIIIiiiIl[SynapseXen_lIlllilliIIliiIIiI]or SynapseXen_lliIlIIIilIIliIIiII[SynapseXen_lIlllilliIIliiIIiI]if not SynapseXen_liIliliIlIIIillIl then error("Synapse Xen - Failed to verify bytecode. Please make sure your Lua implementation supports non-null terminated strings.")end;local SynapseXen_IiIiilIIllI=SynapseXen_iiIllilillIIIiiiIl[SynapseXen_ilIIiilllilII]or SynapseXen_lliIlIIIilIIliIIiII[SynapseXen_ilIIiilllilII]if SynapseXen_IiIiilIIllI then SynapseXen_liiIi[SynapseXen_ilIiiiillII]=SynapseXen_IiIiilIIllI;SynapseXen_ilIiiiillII=SynapseXen_ilIiiiillII+1;SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi=SynapseXen_iIIliiIIIiIll(SynapseXen_liIliliIlIIIillIl..SynapseXen_iIiIlIillIlliili(SynapseXen_IiIiilIIllI,1,1),SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi)else local SynapseXen_lIiIIiiIIIlillii=SynapseXen_liIliliIlIIIillIl..SynapseXen_iIiIlIillIlliili(SynapseXen_liIliliIlIIIillIl,1,1)SynapseXen_liiIi[SynapseXen_ilIiiiillII]=SynapseXen_lIiIIiiIIIlillii;SynapseXen_ilIiiiillII=SynapseXen_ilIiiiillII+1;SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi=SynapseXen_iIIliiIIIiIll(SynapseXen_lIiIIiiIIIlillii,SynapseXen_lliIlIIIilIIliIIiII,SynapseXen_ilIlIIiIlllIIiiiII,SynapseXen_lIlIliilIIi)end;SynapseXen_lIlllilliIIliiIIiI=SynapseXen_ilIIiilllilII end;return SynapseXen_iIIIIlIliiliIiIll(SynapseXen_liiIi)end;local function SynapseXen_lIiiil(SynapseXen_llIiIlil,SynapseXen_iilIiiliiillIIilIi,SynapseXen_ilIIilliili)if SynapseXen_ilIIilliili then local SynapseXen_IIIiIiililIiii=SynapseXen_llIiIlil/2^(SynapseXen_iilIiiliiillIIilIi-1)%2^(SynapseXen_ilIIilliili-1-(SynapseXen_iilIiiliiillIIilIi-1)+1)return SynapseXen_IIIiIiililIiii-SynapseXen_IIIiIiililIiii%1 else local SynapseXen_iiiIliIiIIliIIlIlli=2^(SynapseXen_iilIiiliiillIIilIi-1)if SynapseXen_llIiIlil%(SynapseXen_iiiIliIiIIliIIlIlli+SynapseXen_iiiIliIiIIliIIlIlli)>=SynapseXen_iiiIliIiIIliIIlIlli then return 1 else return 0 end end end;local function SynapseXen_iIIliii()local SynapseXen_iIlIiiIilIII=SynapseXen_lIilIiiIiIiIliIi(2162144820,SynapseXen_ilIllllilIilIIIIlI[4])while true do if SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(1383174331,SynapseXen_liIiiliIIiiiillIiIi)then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI+44892,SynapseXen_lIilIIiillI-38679)-SynapseXen_lIilIiiIiIiIliIi(2888435060,SynapseXen_ilIllllilIilIIIIlI[5])end;SynapseXen_iIlIiiIilIII=SynapseXen_iIlIiiIilIII+SynapseXen_lIilIiiIiIiIliIi(888136258,SynapseXen_ilIllllilIilIIIIlI[2])elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(43403037,SynapseXen_liIiiliIIiiiillIiIi)then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI+35407,SynapseXen_lIilIIiillI+21939)-SynapseXen_lIilIiiIiIiIliIi(41899183,SynapseXen_ilIllllilIilIIIIlI[4])end;SynapseXen_iIlIiiIilIII=SynapseXen_iIlIiiIilIII+SynapseXen_lIilIiiIiIiIliIi(2888486612,SynapseXen_ilIllllilIilIIIIlI[5])elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(3326520097,SynapseXen_ilIllllilIilIIIIlI[3])then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI-12137,SynapseXen_lIilIIiillI-13915)+SynapseXen_lIilIiiIiIiIliIi(3910019922,SynapseXen_liIiiliIIiiiillIiIi)end;SynapseXen_iIlIiiIilIII=SynapseXen_iIlIiiIilIII-SynapseXen_lIilIiiIiIiIliIi(4159816661,SynapseXen_ilIllllilIilIIIIlI[1])elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(1383173287,SynapseXen_liIiiliIIiiiillIiIi)then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI+1729,SynapseXen_lIilIIiillI-17131)-SynapseXen_lIilIiiIiIiIliIi(3910009909,SynapseXen_liIiiliIIiiiillIiIi)end;SynapseXen_iIlIiiIilIII=SynapseXen_iIlIiiIilIII-SynapseXen_lIilIiiIiIiIliIi(41890645,SynapseXen_ilIllllilIilIIIIlI[4])elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(3103836623,SynapseXen_ilIllllilIilIIIIlI[4])then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI-28963,SynapseXen_lIilIIiillI-29607)-SynapseXen_lIilIiiIiIiIliIi(555216482,SynapseXen_ilIllllilIilIIIIlI[3])end;SynapseXen_iIlIiiIilIII=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iIlIiiIilIII,SynapseXen_lIilIiiIiIiIliIi(3038785898,SynapseXen_liIiiliIIiiiillIiIi))elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(241144012,SynapseXen_liIiiliIIiiiillIiIi)then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI+10524,SynapseXen_lIilIIiillI+39542)+SynapseXen_lIilIiiIiIiIliIi(3910011795,SynapseXen_liIiiliIIiiiillIiIi)end;SynapseXen_iIlIiiIilIII=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iIlIiiIilIII,SynapseXen_lIilIiiIiIiIliIi(85136277,SynapseXen_ilIllllilIilIIIIlI[1]))elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(43450111,SynapseXen_liIiiliIIiiiillIiIi)then return elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(1968249256,SynapseXen_ilIllllilIilIIIIlI[1])then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI-17028,SynapseXen_lIilIIiillI-18608)-SynapseXen_lIilIiiIiIiIliIi(3910038513,SynapseXen_liIiiliIIiiiillIiIi)end;SynapseXen_iIlIiiIilIII=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iIlIiiIilIII,SynapseXen_lIilIiiIiIiIliIi(2515908525,SynapseXen_ilIllllilIilIIIIlI[5]))elseif SynapseXen_iIlIiiIilIII==SynapseXen_lIilIiiIiIiIliIi(4240249756,SynapseXen_liIiiliIIiiiillIiIi)then SynapseXen_IIiiliIilIiiiI=function(SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI)return SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIiIIIIIiIIlIiIiI-5835,SynapseXen_lIilIIiillI+8433)-SynapseXen_lIilIiiIiIiIliIi(3910042645,SynapseXen_liIiiliIIiiiillIiIi)end;SynapseXen_iIlIiiIilIII=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iIlIiiIilIII,SynapseXen_lIilIiiIiIiIliIi(388329040,SynapseXen_liIiiliIIiiiillIiIi))end end end;local function SynapseXen_IIIlill(SynapseXen_IiIliiiillIlIIliiI)local SynapseXen_IliliiIIIIilIl=1;local SynapseXen_IIlllIil;local SynapseXen_iiIIlIIillilI;local function SynapseXen_illii()local SynapseXen_lIIiIlIIIIiilIllIIil=SynapseXen_IIIIillIIIliIl(SynapseXen_IiIliiiillIlIIliiI,SynapseXen_IliliiIIIIilIl,SynapseXen_IliliiIIIIilIl)SynapseXen_IliliiIIIIilIl=SynapseXen_IliliiIIIIilIl+1;return SynapseXen_lIIiIlIIIIiilIllIIil end;local function SynapseXen_IIillliIiii()local SynapseXen_lIIlllIlIIIi,SynapseXen_lIiIIIIIiIIlIiIiI,SynapseXen_lIilIIiillI,SynapseXen_iiIIIIi=SynapseXen_IIIIillIIIliIl(SynapseXen_IiIliiiillIlIIliiI,SynapseXen_IliliiIIIIilIl,SynapseXen_IliliiIIIIilIl+3)SynapseXen_IliliiIIIIilIl=SynapseXen_IliliiIIIIilIl+4;return SynapseXen_iiIIIIi*16777216+SynapseXen_lIilIIiillI*65536+SynapseXen_lIiIIIIIiIIlIiIiI*256+SynapseXen_lIIlllIlIIIi end;local function SynapseXen_IiiiIliIliIiIiIi()return SynapseXen_IIillliIiii()*4294967296+SynapseXen_IIillliIiii()end;local function SynapseXen_iiIlIii()local SynapseXen_liIiIliliIIlI=SynapseXen_iiililIlIiiliiillIlI(SynapseXen_IIillliIiii(),SynapseXen_iillIlliII[933892480]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="SYNAPSE XEN [FE BYPASS] [BETTER THEN LURAPH] [AMAZING] OMG OMG OMG !!!!!!"SynapseXen_iillIlliII[933892480]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1346492038,2410968002),SynapseXen_lIilIiiIiIiIliIi(2594626660,SynapseXen_ilIllllilIilIIIIlI[5]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{4182913793,1849289885,3847464351,1342156515,2438159094,480885268,1867258922,67268387,414297217}return SynapseXen_iillIlliII[933892480]end)())local SynapseXen_lIIllIiIliiIlllllliI=SynapseXen_iiililIlIiiliiillIlI(SynapseXen_IIillliIiii(),SynapseXen_iillIlliII[2270638235]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="https://twitter.com/Ripull_RBLX/status/1059334518581145603"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(2453344636,432816361)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(4174774958,4174816152)end;SynapseXen_iIIIl=SynapseXen_iIIIl-SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[2270638235]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(4292806034,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(1851844393,SynapseXen_ilIllllilIilIIIIlI[3]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{524198476,3754059098,3817373713,2683464200,454068447,2849708967,3087202578,2909019072,473534095}return SynapseXen_iillIlliII[2270638235]end)(9331,11829,"lllIliiiIiIl",10249,{},{},{},{},"I",{}))local SynapseXen_iilIiIilIill=1;local SynapseXen_liIlliIIIiIil=SynapseXen_lIiiil(SynapseXen_lIIllIiIliiIlllllliI,1,20)*2^32+SynapseXen_liIiIliliIIlI;local SynapseXen_iIIlllllIlIIlii=SynapseXen_lIiiil(SynapseXen_lIIllIiIliiIlllllliI,21,31)local SynapseXen_llIllIlilIllIIli=(-1)^SynapseXen_lIiiil(SynapseXen_lIIllIiIliiIlllllliI,32)if SynapseXen_iIIlllllIlIIlii==0 then if SynapseXen_liIlliIIIiIil==0 then return SynapseXen_llIllIlilIllIIli*0 else SynapseXen_iIIlllllIlIIlii=1;SynapseXen_iilIiIilIill=0 end elseif SynapseXen_iIIlllllIlIIlii==2047 then if SynapseXen_liIlliIIIiIil==0 then return SynapseXen_llIllIlilIllIIli*1/0 else return SynapseXen_llIllIlilIllIIli*0/0 end end;return math.ldexp(SynapseXen_llIllIlilIllIIli,SynapseXen_iIIlllllIlIIlii-1023)*(SynapseXen_iilIiIilIill+SynapseXen_liIlliIIIiIil/2^52)end;local function SynapseXen_liiiIiIiIiii(SynapseXen_illllIIIIiIiiiIi)local SynapseXen_IiillilIiiIlIlliiI;if SynapseXen_illllIIIIiIiiiIi then SynapseXen_IiillilIiiIlIlliiI=SynapseXen_iIiIlIillIlliili(SynapseXen_IiIliiiillIlIIliiI,SynapseXen_IliliiIIIIilIl,SynapseXen_IliliiIIIIilIl+SynapseXen_illllIIIIiIiiiIi-1)SynapseXen_IliliiIIIIilIl=SynapseXen_IliliiIIIIilIl+SynapseXen_illllIIIIiIiiiIi else SynapseXen_illllIIIIiIiiiIi=SynapseXen_IIlllIil()if SynapseXen_illllIIIIiIiiiIi==0 then return""end;SynapseXen_IiillilIiiIlIlliiI=SynapseXen_iIiIlIillIlliili(SynapseXen_IiIliiiillIlIIliiI,SynapseXen_IliliiIIIIilIl,SynapseXen_IliliiIIIIilIl+SynapseXen_illllIIIIiIiiiIi-1)SynapseXen_IliliiIIIIilIl=SynapseXen_IliliiIIIIilIl+SynapseXen_illllIIIIiIiiiIi end;return SynapseXen_IiillilIiiIlIlliiI end;local function SynapseXen_lilliIIIIlIliiliIlii(SynapseXen_IiillilIiiIlIlliiI)local SynapseXen_IIIiIiililIiii={}for SynapseXen_lllilIIIllililIIlIi=1,#SynapseXen_IiillilIiiIlIlliiI do local SynapseXen_liiiIilliiilIIliil=SynapseXen_IiillilIiiIlIlliiI:sub(SynapseXen_lllilIIIllililIIlIi,SynapseXen_lllilIIIllililIIlIi)SynapseXen_IIIiIiililIiii[#SynapseXen_IIIiIiililIiii+1]=string.char(SynapseXen_lIilIiiIiIiIliIi(string.byte(SynapseXen_liiiIilliiilIIliil),SynapseXen_iillIlliII[2952018602]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="double-header fair! this rationalization has a overenthusiastically anticheat! you will get nonpermissible for exploiting!"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(579310494,3090021572)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(4209840582,4209818745)end;SynapseXen_iIIIl=SynapseXen_iIIIl+SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[2952018602]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(2898183939,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(3742791195,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{3760885321,2036477415,1619889306,2962670457,1528004725,3577618620,382314588,3098483726}return SynapseXen_iillIlliII[2952018602]end)(3148,"ilIIIii",10895,13560,"iilllllIliIiiI",{},6305,"IllllllliilIillIlI","iIllllIiI")))end;return table.concat(SynapseXen_IIIiIiililIiii)end;local function SynapseXen_liiIll()local SynapseXen_IIiililIilIlllliiili={}local SynapseXen_IilIiiiillll={}local SynapseXen_IIliiilIiiliilII={}local SynapseXen_liiiIlillIililIii={[SynapseXen_iillIlliII[3722681896]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="inb4 posted on exploit reports section"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(1198617687,3944673247)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(3910505529,3910540789)end;SynapseXen_iIIIl=SynapseXen_iIIIl-SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[3722681896]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(1936874188,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(2122981664,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2909036160,3501444168,2359392139}return SynapseXen_iillIlliII[3722681896]end)("lliiIIIIIiIIil","lIIiiIIII","l",8504,"IiliiillIIli","iIiiIii")]=SynapseXen_IIiililIilIlllliiili,[SynapseXen_iillIlliII[1322603437]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="xen doesn't come with instance caching, sorry superskater"SynapseXen_iillIlliII[1322603437]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1234169112,2616195061),SynapseXen_lIilIiiIiIiIliIi(1400832639,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2105249635,1296455906,1964472716,1977716365,242545059,1252914832}return SynapseXen_iillIlliII[1322603437]end)()]=SynapseXen_IilIiiiillll,[SynapseXen_iillIlliII[2716574232]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="so if you'we nyot awawe of expwoiting by this point, you've pwobabwy been wiving undew a wock that the pionyeews used to wide fow miwes. wobwox is often seen as an expwoit-infested gwound by most fwom the suwface, awthough this isn't the case."SynapseXen_iillIlliII[2716574232]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(4158678024,1238442286),SynapseXen_lIilIiiIiIiIliIi(1141457967,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2362934768,3584825577,84763399,4058176963,4121109528,3464102765,4013913617,3644297691}return SynapseXen_iillIlliII[2716574232]end)()]=SynapseXen_IIliiilIiiliilII}SynapseXen_illii()SynapseXen_illii()SynapseXen_liiiIlillIililIii[971025170]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_illii(),SynapseXen_iillIlliII[849413610]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="HELP ME PEOPLE ARE CRASHING MY GAME PLZ HELP"SynapseXen_iillIlliII[849413610]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1730124159,1043123955),SynapseXen_lIilIiiIiIiIliIi(2952962537,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2534054742,1038769976,453205404,959297495,968335698,3808117622,4202306117,3100320007,1001891347}return SynapseXen_iillIlliII[849413610]end)())SynapseXen_liiiIlillIililIii[1232933912]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_illii(),SynapseXen_iillIlliII[1657256976]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="now with shitty xor string obfuscation"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(598176565,4026810318)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(3019698602,3019744814)end;SynapseXen_iIIIl=SynapseXen_iIIIl-SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[1657256976]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(578322467,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(3503101980,SynapseXen_ilIllllilIilIIIIlI[3]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{3306051731,2008594810}return SynapseXen_iillIlliII[1657256976]end)("IIIIIIlI",11776))for SynapseXen_illililIiil=1,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iiIIlIIillilI(),SynapseXen_iillIlliII[2510078367]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="this is so sad, alexa play ripull.mp4"SynapseXen_iillIlliII[2510078367]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(186256668,3725437175),SynapseXen_lIilIiiIiIiIliIi(2418500254,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{1282989169,847099972,2403106212}return SynapseXen_iillIlliII[2510078367]end)())do local SynapseXen_IlIillIlllili=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIillliIiii(),SynapseXen_iillIlliII[2328944068]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="this is a christian obfuscator, no cursing allowed in our scripts"SynapseXen_iillIlliII[2328944068]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(372192770,2210376330),SynapseXen_lIilIiiIiIiIliIi(815955085,SynapseXen_ilIllllilIilIIIIlI[4]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{629745696,1841126905,1219033871,4040735661,3153098322,3096400105}return SynapseXen_iillIlliII[2328944068]end)())local SynapseXen_IiiIII=SynapseXen_illii()local SynapseXen_iIiiiIIiIlllIliIi=SynapseXen_illii()SynapseXen_IIillliIiii()local SynapseXen_liiiiiiI={[1340504709]=SynapseXen_IlIillIlllili,[422628075]=SynapseXen_IiiIII,[1713111702]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,1,6),[2005561348]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,7,14)}if SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[3454501117]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="hi xen doesn't work on sk8r please help"SynapseXen_iillIlliII[3454501117]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1129645575,3721762179),SynapseXen_lIilIiiIiIiIliIi(2633969956,SynapseXen_ilIllllilIilIIIIlI[4]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{1243330063,4165944629}return SynapseXen_iillIlliII[3454501117]end)())then SynapseXen_liiiiiiI[1328471899]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,24,32)SynapseXen_liiiiiiI[688126082]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,15,23)elseif SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[3075881460]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="wait for someone on devforum to say they are gonna deobfuscate this"SynapseXen_iillIlliII[3075881460]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(26325920,1937015233),SynapseXen_lIilIiiIiIiIliIi(1889091994,SynapseXen_ilIllllilIilIIIIlI[4]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2870008302,3518725692,3035135703}return SynapseXen_iillIlliII[3075881460]end)())then SynapseXen_liiiiiiI[863174940]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,15,32)elseif SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[2603792202]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="pain is gonna use the backspace method on xen"SynapseXen_iillIlliII[2603792202]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(555371945,1895312168),SynapseXen_lIilIiiIiIiIliIi(2786097950,SynapseXen_ilIllllilIilIIIIlI[1]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{107033230,290926690,314741676,2571483746,3113157893}return SynapseXen_iillIlliII[2603792202]end)())then SynapseXen_liiiiiiI[1426143073]=SynapseXen_lIiiil(SynapseXen_IlIillIlllili,15,32)-131071 end;SynapseXen_IilIiiiillll[SynapseXen_illililIiil]=SynapseXen_liiiiiiI end;SynapseXen_IIillliIiii()for SynapseXen_illililIiil=1,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iiIIlIIillilI(),SynapseXen_iillIlliII[3960973482]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="aspect network better obfuscator"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(1225519815,318936950)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(1491445609,1491465543)end;SynapseXen_iIIIl=SynapseXen_iIIIl-SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[3960973482]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(1397599935,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(1036526729,SynapseXen_ilIllllilIilIIIIlI[1]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{4182306608,1308232431,339076473,1008303161,3977814900,4293838932,1578355166}return SynapseXen_iillIlliII[3960973482]end)("ilIIiIilIiIIi",{},4325,3509,"IiiillllliIlIiIIIIl","IiIlIiilIlIIlIiiii","IllilIIiI",{},{},"IIliiIli"))do SynapseXen_illii()local SynapseXen_iIiiiIIiIlllIliIi=SynapseXen_illii()SynapseXen_illii()local SynapseXen_lIilIiiIliiIIl;if SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[2139417777]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="hi my 2.5mb script doesn't work with xen please help"SynapseXen_iillIlliII[2139417777]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1535796548,328763950),SynapseXen_lIilIiiIiIiIliIi(1762038307,SynapseXen_ilIllllilIilIIIIlI[3]))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{3407498488,4120708737,3864421059,1976647929,4074140189,4162187719}return SynapseXen_iillIlliII[2139417777]end)())then SynapseXen_lIilIiiIliiIIl=SynapseXen_illii()~=0 elseif SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[282851802]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="xen detects custom getfenv"SynapseXen_iillIlliII[282851802]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(2657347187,3106643347),SynapseXen_lIilIiiIiIiIliIi(3460377667,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{987366453,1579008377,4063904069,4135902334,958391070,4171525533,2060557906}return SynapseXen_iillIlliII[282851802]end)())then SynapseXen_lIilIiiIliiIIl=SynapseXen_iiIlIii()elseif SynapseXen_iIiiiIIiIlllIliIi==(SynapseXen_iillIlliII[50598889]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="level 1 crook = luraph, level 100 boss = xen"SynapseXen_iillIlliII[50598889]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(3708543538,1841920156),SynapseXen_lIilIiiIiIiIliIi(1506479257,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{3548478419,2784330584,1241019044,198324167,1657039901}return SynapseXen_iillIlliII[50598889]end)())then SynapseXen_lIilIiiIliiIIl=SynapseXen_iIiIlIillIlliili(SynapseXen_lilliIIIIlIliiliIlii(SynapseXen_liiiIiIiIiii()),1,-2)end;SynapseXen_IIiililIilIlllliiili[SynapseXen_illililIiil-1]=SynapseXen_lIilIiiIliiIIl end;for SynapseXen_illililIiil=1,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iiIIlIIillilI(),SynapseXen_iillIlliII[1920793482]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="yed"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(935109527,3387000166)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(2009834360,2009872482)end;SynapseXen_iIIIl=SynapseXen_iIIIl+SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[1920793482]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(3266803941,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(318264244,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{1208904752,291617706,1285356657,605244474,475170607,888348529}return SynapseXen_iillIlliII[1920793482]end)(10085,"iiIll"))do SynapseXen_IIliiilIiiliilII[SynapseXen_illililIiil-1]=SynapseXen_liiIll()end;return SynapseXen_liiiIlillIililIii end;do assert(SynapseXen_liiiIiIiIiii(4)=="\27Xen","Synapse Xen - Failed to verify bytecode. Please make sure your Lua implementation supports non-null terminated strings.")SynapseXen_iiIIlIIillilI=SynapseXen_IIillliIiii;SynapseXen_IIlllIil=SynapseXen_IIillliIiii;local SynapseXen_liliIl=SynapseXen_liiiIiIiIiii()SynapseXen_illii()SynapseXen_IIillliIiii()SynapseXen_liIiiliIIiiiillIiIi=SynapseXen_iIIIIIlIiillii(SynapseXen_iiIIlIIillilI())SynapseXen_illii()local SynapseXen_iiIlIiiIIIlli=0;for SynapseXen_lllilIIIllililIIlIi=1,#SynapseXen_liliIl do local SynapseXen_liiiIilliiilIIliil=SynapseXen_liliIl:sub(SynapseXen_lllilIIIllililIIlIi,SynapseXen_lllilIIIllililIIlIi)SynapseXen_iiIlIiiIIIlli=SynapseXen_iiIlIiiIIIlli+string.byte(SynapseXen_liiiIilliiilIIliil)end;SynapseXen_iiIlIiiIIIlli=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_iiIlIiiIIIlli,SynapseXen_liIiiliIIiiiillIiIi)for SynapseXen_illililIiil=1,SynapseXen_illii()do SynapseXen_ilIllllilIilIIIIlI[SynapseXen_illililIiil]=SynapseXen_iiililIlIiiliiillIlI(SynapseXen_iiIIlIIillilI(),SynapseXen_iiIlIiiIIIlli)end;SynapseXen_iIIliii()end;return SynapseXen_liiIll()end;local function SynapseXen_IIIlIiIllIIIliiillli(...)return SynapseXen_iiilliIiI('#',...),{...}end;local function SynapseXen_Illlllii(SynapseXen_liiiIlillIililIii,SynapseXen_iliIlliiliIlIIIilIil,SynapseXen_iiIIiilIIiliiilIiIiI)local SynapseXen_IIiililIilIlllliiili=SynapseXen_liiiIlillIililIii[SynapseXen_iillIlliII[3722681896]or(function(...)local SynapseXen_lIiIIlIIliiiiliIiIiI="inb4 posted on exploit reports section"local SynapseXen_iIIIl=SynapseXen_IIiiliIilIiiiI(1198617687,3944673247)local SynapseXen_llllIIIliIili={...}for SynapseXen_lllilIIIllililIIlIi,SynapseXen_illlIIllli in pairs(SynapseXen_llllIIIliIili)do local SynapseXen_lIIIiIiIi;local SynapseXen_IIIiilIiiIiIIiIiiilI=type(SynapseXen_illlIIllli)if SynapseXen_IIIiilIiiIiIIiIiiilI=="number"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="string"then SynapseXen_lIIIiIiIi=SynapseXen_illlIIllli:len()elseif SynapseXen_IIIiilIiiIiIIiIiiilI=="table"then SynapseXen_lIIIiIiIi=SynapseXen_IIiiliIilIiiiI(3910505529,3910540789)end;SynapseXen_iIIIl=SynapseXen_iIIIl-SynapseXen_lIIIiIiIi end;SynapseXen_iillIlliII[3722681896]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(1936874188,SynapseXen_iIIIl),SynapseXen_lIilIiiIiIiIliIi(2122981664,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2909036160,3501444168,2359392139}return SynapseXen_iillIlliII[3722681896]end)("lliiIIIIIiIIil","lIIiiIIII","l",8504,"IiliiillIIli","iIiiIii")]local SynapseXen_IilIiiiillll=SynapseXen_liiiIlillIililIii[SynapseXen_iillIlliII[1322603437]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="xen doesn't come with instance caching, sorry superskater"SynapseXen_iillIlliII[1322603437]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(1234169112,2616195061),SynapseXen_lIilIiiIiIiIliIi(1400832639,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2105249635,1296455906,1964472716,1977716365,242545059,1252914832}return SynapseXen_iillIlliII[1322603437]end)()]local SynapseXen_IIliiilIiiliilII=SynapseXen_liiiIlillIililIii[SynapseXen_iillIlliII[2716574232]or(function()local SynapseXen_lIiIIlIIliiiiliIiIiI="so if you'we nyot awawe of expwoiting by this point, you've pwobabwy been wiving undew a wock that the pionyeews used to wide fow miwes. wobwox is often seen as an expwoit-infested gwound by most fwom the suwface, awthough this isn't the case."SynapseXen_iillIlliII[2716574232]=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIiiliIilIiiiI(4158678024,1238442286),SynapseXen_lIilIiiIiIiIliIi(1141457967,SynapseXen_liIiiliIIiiiillIiIi))-string.len(SynapseXen_lIiIIlIIliiiiliIiIiI)-#{2362934768,3584825577,84763399,4058176963,4121109528,3464102765,4013913617,3644297691}return SynapseXen_iillIlliII[2716574232]end)()]return function(...)local SynapseXen_iIlIlllIIlIlillillI,SynapseXen_iIIII=1,-1;local SynapseXen_iIiIllIIliIIIilIi,SynapseXen_lliiiiIiII={},SynapseXen_iiilliIiI('#',...)-1;local SynapseXen_illIIIlIiiIIliIIi=0;local SynapseXen_iililIilIilllliiI={}local SynapseXen_llillili={}local SynapseXen_lIlllIIiiiIiii=setmetatable({},{__index=SynapseXen_iililIilIilllliiI,__newindex=function(SynapseXen_IilIilliiIiI,SynapseXen_IiiIiIiI,SynapseXen_lIlIiIlIIliiiillli)if SynapseXen_IiiIiIiI>SynapseXen_iIIII then SynapseXen_iIIII=SynapseXen_IiiIiIiI end;SynapseXen_iililIilIilllliiI[SynapseXen_IiiIiIiI]=SynapseXen_lIlIiIlIIliiiillli end})local function SynapseXen_lllIiIiIII()local SynapseXen_liiiiiiI,SynapseXen_IllIiiI;while true do SynapseXen_liiiiiiI=SynapseXen_IilIiiiillll[SynapseXen_iIlIlllIIlIlillillI]SynapseXen_IllIiiI=SynapseXen_liiiiiiI[422628075]SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1;if SynapseXen_IllIiiI==191 then local SynapseXen_iiIIliI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],32,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],115,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],10,256)]=SynapseXen_iiIIliI/SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==29 then SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],1,256)]=SynapseXen_IIiililIilIlllliiili[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[863174940],140271,262144)]elseif SynapseXen_IllIiiI==39 then SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],98),SynapseXen_illIIIlIiiIIliIIi,256)]=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],104,512)~=0;if SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[688126082],113,512)~=0 then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end elseif SynapseXen_IllIiiI==186 then local SynapseXen_iliIlIIIliIlIi=SynapseXen_IIliiilIiiliilII[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[863174940],80584)]local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_IIlliilliIl;local SynapseXen_ilIiiIIllliiIlll;if SynapseXen_iliIlIIIliIlIi[971025170]~=0 then SynapseXen_IIlliilliIl={}SynapseXen_ilIiiIIllliiIlll=setmetatable({},{__index=function(SynapseXen_IilIilliiIiI,SynapseXen_IiiIiIiI)local SynapseXen_illllI=SynapseXen_IIlliilliIl[SynapseXen_IiiIiIiI]return SynapseXen_illllI[1][SynapseXen_illllI[2]]end,__newindex=function(SynapseXen_IilIilliiIiI,SynapseXen_IiiIiIiI,SynapseXen_lIlIiIlIIliiiillli)local SynapseXen_illllI=SynapseXen_IIlliilliIl[SynapseXen_IiiIiIiI]SynapseXen_illllI[1][SynapseXen_illllI[2]]=SynapseXen_lIlIiIlIIliiiillli end})for SynapseXen_illililIiil=1,SynapseXen_iliIlIIIliIlIi[971025170]do local SynapseXen_lIIIilIillIiiIIilIi=SynapseXen_IilIiiiillll[SynapseXen_iIlIlllIIlIlillillI]if SynapseXen_lIIIilIillIiiIIilIi[422628075]==68 then SynapseXen_IIlliilliIl[SynapseXen_illililIiil-1]={SynapseXen_IIIillllliiIiIi,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIIIilIillIiiIIilIi[1328471899],69)}elseif SynapseXen_lIIIilIillIiiIIilIi[422628075]==209 then SynapseXen_IIlliilliIl[SynapseXen_illililIiil-1]={SynapseXen_iiIIiilIIiliiilIiIiI,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIIIilIillIiiIIilIi[1328471899],126)}end;SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end;SynapseXen_llillili[#SynapseXen_llillili+1]=SynapseXen_IIlliilliIl end;SynapseXen_IIIillllliiIiIi[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],75,256)]=SynapseXen_Illlllii(SynapseXen_iliIlIIIliIlIi,SynapseXen_iliIlliiliIlIIIilIil,SynapseXen_ilIiiIIllliiIlll)elseif SynapseXen_IllIiiI==75 then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+SynapseXen_liiiiiiI[1426143073]elseif SynapseXen_IllIiiI==59 then local SynapseXen_iiIIliI,SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],93,512),SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],99)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],37)][SynapseXen_iiIIliI]=SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==237 then local SynapseXen_iiIIliI=SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],62,512)]if not not SynapseXen_iiIIliI==(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],28)==0)then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 else SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],6)]=SynapseXen_iiIIliI end elseif SynapseXen_IllIiiI==188 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],45),SynapseXen_illIIIlIiiIIliIIi,256)]=not SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],35)]elseif SynapseXen_IllIiiI==84 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],126,256)local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],67)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_lllIiIIl,SynapseXen_iilIliiIlIli;local SynapseXen_iillllIIIlliilIlIiiI;if SynapseXen_iiIIliI==1 then return elseif SynapseXen_iiIIliI==0 then SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_iIIII else SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_IiIIillillliIiiliiI+SynapseXen_iiIIliI-2 end;SynapseXen_iilIliiIlIli={}SynapseXen_lllIiIIl=0;for SynapseXen_illililIiil=SynapseXen_IiIIillillliIiiliiI,SynapseXen_iillllIIIlliilIlIiiI do SynapseXen_lllIiIIl=SynapseXen_lllIiIIl+1;SynapseXen_iilIliiIlIli[SynapseXen_lllIiIIl]=SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]end;return SynapseXen_iilIliiIlIli,SynapseXen_lllIiIIl elseif SynapseXen_IllIiiI==57 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],8)local SynapseXen_iiIIliI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],36,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],23)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_IlIiiiiIlIi,SynapseXen_iiIIllllIli;local SynapseXen_iillllIIIlliilIlIiiI,SynapseXen_lllIiIIl;SynapseXen_IlIiiiiIlIi={}if SynapseXen_iiIIliI~=1 then if SynapseXen_iiIIliI~=0 then SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_IiIIillillliIiiliiI+SynapseXen_iiIIliI-1 else SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_iIIII end;SynapseXen_lllIiIIl=0;for SynapseXen_illililIiil=SynapseXen_IiIIillillliIiiliiI+1,SynapseXen_iillllIIIlliilIlIiiI do SynapseXen_lllIiIIl=SynapseXen_lllIiIIl+1;SynapseXen_IlIiiiiIlIi[SynapseXen_lllIiIIl]=SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]end;SynapseXen_iillllIIIlliilIlIiiI,SynapseXen_iiIIllllIli=SynapseXen_IIIlIiIllIIIliiillli(SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI](unpack(SynapseXen_IlIiiiiIlIi,1,SynapseXen_iillllIIIlliilIlIiiI-SynapseXen_IiIIillillliIiiliiI)))else SynapseXen_iillllIIIlliilIlIiiI,SynapseXen_iiIIllllIli=SynapseXen_IIIlIiIllIIIliiillli(SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]())end;SynapseXen_iIIII=SynapseXen_IiIIillillliIiiliiI-1;if SynapseXen_liiiIilliiilIIliil~=1 then if SynapseXen_liiiIilliiilIIliil~=0 then SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_IiIIillillliIiiliiI+SynapseXen_liiiIilliiilIIliil-2 else SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_iillllIIIlliilIlIiiI+SynapseXen_IiIIillillliIiiliiI-1 end;SynapseXen_lllIiIIl=0;for SynapseXen_illililIiil=SynapseXen_IiIIillillliIiiliiI,SynapseXen_iillllIIIlliilIlIiiI do SynapseXen_lllIiIIl=SynapseXen_lllIiIIl+1;SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]=SynapseXen_iiIIllllIli[SynapseXen_lllIiIIl]end end elseif SynapseXen_IllIiiI==93 then SynapseXen_iiIIiilIIiliiilIiIiI[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],20,512)]=SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],112,256),SynapseXen_illIIIlIiiIIliIIi,256)]elseif SynapseXen_IllIiiI==209 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],107)]=SynapseXen_iiIIiilIIiliiilIiIiI[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],126)]elseif SynapseXen_IllIiiI==251 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lilIiIlliIi(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],45),SynapseXen_illIIIlIiiIIliIIi,256)local SynapseXen_iiIIliI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],10,512)local SynapseXen_IIIillllliiIiIi,SynapseXen_iilIiiilIiiili=SynapseXen_lIlllIIiiiIiii,SynapseXen_iIiIllIIliIIIilIi;SynapseXen_iIIII=SynapseXen_IiIIillillliIiiliiI-1;for SynapseXen_illililIiil=SynapseXen_IiIIillillliIiiliiI,SynapseXen_IiIIillillliIiiliiI+(SynapseXen_iiIIliI>0 and SynapseXen_iiIIliI-1 or SynapseXen_lliiiiIiII)do SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]=SynapseXen_iilIiiilIiiili[SynapseXen_illililIiil-SynapseXen_IiIIillillliIiiliiI]end elseif SynapseXen_IllIiiI==17 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],68),SynapseXen_illIIIlIiiIIliIIi,256)~=0;local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],19,512),SynapseXen_illIIIlIiiIIliIIi)local SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],61,512),SynapseXen_illIIIlIiiIIliIIi,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;if SynapseXen_iiIIliI<=SynapseXen_liiiIilliiilIIliil~=SynapseXen_IiIIillillliIiiliiI then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end elseif SynapseXen_IllIiiI==1 then local SynapseXen_iiIIliI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],21,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],98,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],58,256)]=SynapseXen_iiIIliI%SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==97 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],119,256)local SynapseXen_iiIIliI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],6,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_IlIiiiiIlIi,SynapseXen_iiIIllllIli;local SynapseXen_iillllIIIlliilIlIiiI;local SynapseXen_lilIliIilIiIi=0;SynapseXen_IlIiiiiIlIi={}if SynapseXen_iiIIliI~=1 then if SynapseXen_iiIIliI~=0 then SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_IiIIillillliIiiliiI+SynapseXen_iiIIliI-1 else SynapseXen_iillllIIIlliilIlIiiI=SynapseXen_iIIII end;for SynapseXen_illililIiil=SynapseXen_IiIIillillliIiiliiI+1,SynapseXen_iillllIIIlliilIlIiiI do SynapseXen_IlIiiiiIlIi[#SynapseXen_IlIiiiiIlIi+1]=SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]end;SynapseXen_iiIIllllIli={SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI](unpack(SynapseXen_IlIiiiiIlIi,1,SynapseXen_iillllIIIlliilIlIiiI-SynapseXen_IiIIillillliIiiliiI))}else SynapseXen_iiIIllllIli={SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]()}end;for SynapseXen_ilill in next,SynapseXen_iiIIllllIli do if SynapseXen_ilill>SynapseXen_lilIliIilIiIi then SynapseXen_lilIliIilIiIi=SynapseXen_ilill end end;return SynapseXen_iiIIllllIli,SynapseXen_lilIliIilIiIi elseif SynapseXen_IllIiiI==231 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],21,256)]=-SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],35,512)]elseif SynapseXen_IllIiiI==14 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],80,256)local SynapseXen_iiIIliI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],31,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[688126082],120,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1]=SynapseXen_iiIIliI;SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]=SynapseXen_iiIIliI[SynapseXen_liiiIilliiilIIliil]elseif SynapseXen_IllIiiI==54 then SynapseXen_iliIlliiliIlIIIilIil[SynapseXen_IIiililIilIlllliiili[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[863174940],190020),SynapseXen_illIIIlIiiIIliIIi)]]=SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],78,256),SynapseXen_illIIIlIiiIIliIIi,256)]elseif SynapseXen_IllIiiI==35 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],0),SynapseXen_illIIIlIiiIIliIIi,256)local SynapseXen_IliIlIIliiIlii={}for SynapseXen_illililIiil=1,#SynapseXen_llillili do local SynapseXen_IilIIIiIiiIIillii=SynapseXen_llillili[SynapseXen_illililIiil]for SynapseXen_iilIlIllilIiiIl=0,#SynapseXen_IilIIIiIiiIIillii do local SynapseXen_IiililI=SynapseXen_IilIIIiIiiIIillii[SynapseXen_iilIlIllilIiiIl]local SynapseXen_IIIillllliiIiIi=SynapseXen_IiililI[1]local SynapseXen_IliliiIIIIilIl=SynapseXen_IiililI[2]if SynapseXen_IIIillllliiIiIi==SynapseXen_lIlllIIiiiIiii and SynapseXen_IliliiIIIIilIl>=SynapseXen_IiIIillillliIiiliiI then SynapseXen_IliIlIIliiIlii[SynapseXen_IliliiIIIIilIl]=SynapseXen_IIIillllliiIiIi[SynapseXen_IliliiIIIIilIl]SynapseXen_IiililI[1]=SynapseXen_IliIlIIliiIlii end end end elseif SynapseXen_IllIiiI==34 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],59,256)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_lIllIiIlIlIlIil=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2]local SynapseXen_ilill=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]+SynapseXen_lIllIiIlIlIlIil;SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]=SynapseXen_ilill;if SynapseXen_lIllIiIlIlIlIil>0 then if SynapseXen_ilill<=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1]then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+SynapseXen_liiiiiiI[1426143073]SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+3]=SynapseXen_ilill end else if SynapseXen_ilill>=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1]then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+SynapseXen_liiiiiiI[1426143073]SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+3]=SynapseXen_ilill end end elseif SynapseXen_IllIiiI==68 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],88)]=SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],69)]elseif SynapseXen_IllIiiI==62 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],26,256)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]=assert(tonumber(SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]),'`for` initial value must be a number')SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1]=assert(tonumber(SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1]),'`for` limit must be a number')SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2]=assert(tonumber(SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2]),'`for` step must be a number')SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]-SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2]SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+SynapseXen_liiiiiiI[1426143073]elseif SynapseXen_IllIiiI==107 then if SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[863174940],18085,262144)==149 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],114,256)]=SynapseXen_liIiiliIIiiiillIiIi else SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],114,256)]=SynapseXen_ilIllllilIilIIIIlI[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[863174940],18085,262144)]end elseif SynapseXen_IllIiiI==37 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],121)~=0;local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],107,512),SynapseXen_illIIIlIiiIIliIIi)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],108,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;if SynapseXen_iiIIliI<SynapseXen_liiiIilliiilIIliil~=SynapseXen_IiIIillillliIiiliiI then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end elseif SynapseXen_IllIiiI==201 then if not not SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],84,256),SynapseXen_illIIIlIiiIIliIIi,256)]==(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],96,512)==0)then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end elseif SynapseXen_IllIiiI==77 then local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;for SynapseXen_illililIiil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],124,256),SynapseXen_illIIIlIiiIIliIIi,256),SynapseXen_lIilIiiIiIiIliIi(SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],36,512),SynapseXen_illIIIlIiiIIliIIi)do SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]=nil end elseif SynapseXen_IllIiiI==19 then local SynapseXen_iiIIliI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],64,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[688126082],10,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],75,256)]=SynapseXen_iiIIliI-SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==116 then local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],94)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],30,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],29,256)]=SynapseXen_iiIIliI+SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==74 then local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],93)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],23),SynapseXen_illIIIlIiiIIliIIi,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],61)]=SynapseXen_iiIIliI^SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==170 then local SynapseXen_iiIIliI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[1328471899],64,512),SynapseXen_illIIIlIiiIIliIIi,512)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],59,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],55,256)]=SynapseXen_iiIIliI*SynapseXen_liiiIilliiilIIliil elseif SynapseXen_IllIiiI==33 then local SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[688126082],65,512)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;SynapseXen_IIIillllliiIiIi[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],65)]=SynapseXen_IIIillllliiIiIi[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],42,512)][SynapseXen_liiiIilliiilIIliil]elseif SynapseXen_IllIiiI==143 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],102),SynapseXen_illIIIlIiiIIliIIi)]=#SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],117,512),SynapseXen_illIIIlIiiIIliIIi,512)]elseif SynapseXen_IllIiiI==159 then local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],56)local SynapseXen_iIlIllil=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]for SynapseXen_illililIiil=SynapseXen_iiIIliI+1,SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],97)do SynapseXen_iIlIllil=SynapseXen_iIlIllil..SynapseXen_IIIillllliiIiIi[SynapseXen_illililIiil]end;SynapseXen_lIlllIIiiiIiii[SynapseXen_lilIiIlliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],27,256),SynapseXen_illIIIlIiiIIliIIi,256)]=SynapseXen_iIlIllil elseif SynapseXen_IllIiiI==160 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],119,256)local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[1328471899],98,512),SynapseXen_illIIIlIiiIIliIIi)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],11)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_liiiIilliiilIIliil==0 then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1;SynapseXen_liiiIilliiilIIliil=SynapseXen_IilIiiiillll[SynapseXen_iIlIlllIIlIlillillI][1340504709]end;local SynapseXen_iIiIiIIi=(SynapseXen_liiiIilliiilIIliil-1)*50;local SynapseXen_iilil=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI]if SynapseXen_iiIIliI==0 then SynapseXen_iiIIliI=SynapseXen_iIIII-SynapseXen_IiIIillillliIiiliiI end;for SynapseXen_illililIiil=1,SynapseXen_iiIIliI do SynapseXen_iilil[SynapseXen_iIiIiIIi+SynapseXen_illililIiil]=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+SynapseXen_illililIiil]end elseif SynapseXen_IllIiiI==233 then SynapseXen_lIlllIIiiiIiii[SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],61,256)]=SynapseXen_iliIlliiliIlIIIilIil[SynapseXen_IIiililIilIlllliiili[SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[863174940],131061,262144)]]elseif SynapseXen_IllIiiI==140 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_IIIiiiiiilIiiiilii(SynapseXen_liiiiiiI[2005561348],39,256)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[688126082],122)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;local SynapseXen_iIiIiIIi=SynapseXen_IiIIillillliIiiliiI+2;local SynapseXen_IlIlllIllIlIl={SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI](SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+1],SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2])}for SynapseXen_illililIiil=1,SynapseXen_liiiIilliiilIIliil do SynapseXen_lIlllIIiiiIiii[SynapseXen_iIiIiIIi+SynapseXen_illililIiil]=SynapseXen_IlIlllIllIlIl[SynapseXen_illililIiil]end;if SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+3]~=nil then SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+2]=SynapseXen_IIIillllliiIiIi[SynapseXen_IiIIillillliIiiliiI+3]else SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end elseif SynapseXen_IllIiiI==134 then SynapseXen_illIIIlIiiIIliIIi=SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],71)]elseif SynapseXen_IllIiiI==196 then SynapseXen_lIlllIIiiiIiii[SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[2005561348],99)]={}elseif SynapseXen_IllIiiI==103 then local SynapseXen_IiIIillillliIiiliiI=SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[2005561348],62,256)~=0;local SynapseXen_iiIIliI=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_liiiiiiI[1328471899],48)local SynapseXen_liiiIilliiilIIliil=SynapseXen_lIilIiiIiIiIliIi(SynapseXen_lilIiIlliIi(SynapseXen_liiiiiiI[688126082],22,512),SynapseXen_illIIIlIiiIIliIIi)local SynapseXen_IIIillllliiIiIi=SynapseXen_lIlllIIiiiIiii;if SynapseXen_iiIIliI>255 then SynapseXen_iiIIliI=SynapseXen_IIiililIilIlllliiili[SynapseXen_iiIIliI-256]else SynapseXen_iiIIliI=SynapseXen_IIIillllliiIiIi[SynapseXen_iiIIliI]end;if SynapseXen_liiiIilliiilIIliil>255 then SynapseXen_liiiIilliiilIIliil=SynapseXen_IIiililIilIlllliiili[SynapseXen_liiiIilliiilIIliil-256]else SynapseXen_liiiIilliiilIIliil=SynapseXen_IIIillllliiIiIi[SynapseXen_liiiIilliiilIIliil]end;if SynapseXen_iiIIliI==SynapseXen_liiiIilliiilIIliil~=SynapseXen_IiIIillillliIiiliiI then SynapseXen_iIlIlllIIlIlillillI=SynapseXen_iIlIlllIIlIlillillI+1 end end end end;local SynapseXen_IlIiiiiIlIi={...}for SynapseXen_illililIiil=0,SynapseXen_lliiiiIiII do if SynapseXen_illililIiil>=SynapseXen_liiiIlillIililIii[1232933912]then SynapseXen_iIiIllIIliIIIilIi[SynapseXen_illililIiil-SynapseXen_liiiIlillIililIii[1232933912]]=SynapseXen_IlIiiiiIlIi[SynapseXen_illililIiil+1]else SynapseXen_lIlllIIiiiIiii[SynapseXen_illililIiil]=SynapseXen_IlIiiiiIlIi[SynapseXen_illililIiil+1]end end;local SynapseXen_iiIIliI,SynapseXen_liiiIilliiilIIliil=SynapseXen_lllIiIiIII()if SynapseXen_iiIIliI and SynapseXen_liiiIilliiilIIliil>0 then return unpack(SynapseXen_iiIIliI,1,SynapseXen_liiiIilliiilIIliil)end;return end end;local function SynapseXen_lIliiIIliilIli(SynapseXen_iIliIllillllilliiIii,SynapseXen_iliIlliiliIlIIIilIil)local SynapseXen_iIIiIIIliIiIlI=SynapseXen_IIIlill(SynapseXen_iIliIllillllilliiIii)return SynapseXen_Illlllii(SynapseXen_iIIiIIIliIiIlI,SynapseXen_iliIlliiliIlIIIilIil or getfenv(0)),SynapseXen_iIIiIIIliIiIlI end;return SynapseXen_lIliiIIliilIli(SynapseXen_IiIiII("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"),getfenv())()
+	end)
+end
+local function EOMDQ_fake_script() -- Fake Script: Workspace.GoodBoi.Main.More.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_More"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Main2.Visible = true
+	end)
+end
+local function ARFFSS_fake_script() -- Fake Script: Workspace.GoodBoi.Main.DetectWarTool.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_DetectWarTool"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while true do
+			for _, player in pairs(game.Players:GetPlayers()) do
+				for _, tool in pairs(player.Backpack:GetChildren()) do
+					if tool:IsA('Tool') then
+						if tool.Name == "Knife" then
+							script.Parent.Parent.Frame.MurdConsole.Text = player.DisplayName .. " (@" .. player.Name .. ")"
+							elseif tool.Name == "Revolver" then
+							script.Parent.Parent.Frame.SheriffConsole.Text = player.DisplayName .. " (@" .. player.Name .. ")"
+						end
+					end
+				end
+			end
+			
+			wait(1)
+		end
+	end)
+end
+local function UFGU_fake_script() -- Fake Script: Workspace.GoodBoi.Main.WeAreDevsESP.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_WeAreDevsESP"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		_G.WRDESPEnabled = nil
+		_G.WRDESPBoxes = nil
+		_G.WRDESPTeamColors = true
+		_G.WRDESPTracers = nil
+		_G.WRDESPNames = true
+	
+		if not _G.WRDESPLoaded then    
+	
+			local ESP = {
+				Enabled = false,
+				Boxes = true,
+				BoxShift = CFrame.new(0,-1.5,0),
+				BoxSize = Vector3.new(4,6,0),
+				Color = Color3.fromRGB(255, 255, 255),
+				FaceCamera = false,
+				Names = true,
+				TeamColor = true,
+				Thickness = 1,
+				AttachShift = 1,
+				TeamMates = true,
+				Players = true,
+	
+				Objects = setmetatable({}, {__mode="kv"}),
+				Overrides = {}
+			}
+	
+			local cam = workspace.CurrentCamera
+			local plrs = game:GetService("Players")
+			local plr = plrs.LocalPlayer
+			local mouse = plr:GetMouse()
+	
+			local V3new = Vector3.new
+			local WorldToViewportPoint = cam.WorldToViewportPoint
+	
+			local function Draw(obj, props)
+				local new = Drawing.new(obj)
+	
+				props = props or {}
+				for i,v in pairs(props) do
+					new[i] = v
+				end
+				return new
+			end
+	
+			function ESP:GetTeam(p)
+				local ov = self.Overrides.GetTeam
+				if ov then
+					return ov(p)
+				end
+	
+				return p and p.Team
+			end
+	
+			function ESP:IsTeamMate(p)
+				local ov = self.Overrides.IsTeamMate
+				if ov then
+					return ov(p)
+				end
+	
+				return self:GetTeam(p) == self:GetTeam(plr)
+			end
+	
+			function ESP:GetColor(obj)
+				local ov = self.Overrides.GetColor
+				if ov then
+					return ov(obj)
+				end
+				local p = self:GetPlrFromChar(obj)
+				return p and self.TeamColor and p.Team and p.Team.TeamColor.Color or self.Color
+			end
+	
+			function ESP:GetPlrFromChar(char)
+				local ov = self.Overrides.GetPlrFromChar
+				if ov then
+					return ov(char)
+				end
+	
+				return plrs:GetPlayerFromCharacter(char)
+			end
+	
+			function ESP:Toggle(bool)
+				self.Enabled = bool
+				if not bool then
+					for i,v in pairs(self.Objects) do
+						if v.Type == "Box" then
+							if v.Temporary then
+								v:Remove()
+							else
+								for i,v in pairs(v.Components) do
+									v.Visible = false
+								end
+							end
+						end
+					end
+				end
+			end
+	
+			function ESP:GetBox(obj)
+				return self.Objects[obj]
+			end
+	
+			function ESP:AddObjectListener(parent, options)
+				local function NewListener(c)
+					if type(options.Type) == "string" and c:IsA(options.Type) or options.Type == nil then
+						if type(options.Name) == "string" and c.Name == options.Name or options.Name == nil then
+							if not options.Validator or options.Validator(c) then
+								local box = ESP:Add(c, {
+									PrimaryPart = type(options.PrimaryPart) == "string" and c:WaitForChild(options.PrimaryPart) or type(options.PrimaryPart) == "function" and options.PrimaryPart(c),
+									Color = type(options.Color) == "function" and options.Color(c) or options.Color,
+									ColorDynamic = options.ColorDynamic,
+									Name = type(options.CustomName) == "function" and options.CustomName(c) or options.CustomName,
+									IsEnabled = options.IsEnabled,
+									RenderInNil = options.RenderInNil
+								})
+								if options.OnAdded then
+									coroutine.wrap(options.OnAdded)(box)
+								end
+							end
+						end
+					end
+				end
+	
+				if options.Recursive then
+					parent.DescendantAdded:Connect(NewListener)
+					for i,v in pairs(parent:GetDescendants()) do
+						coroutine.wrap(NewListener)(v)
+					end
+				else
+					parent.ChildAdded:Connect(NewListener)
+					for i,v in pairs(parent:GetChildren()) do
+						coroutine.wrap(NewListener)(v)
+					end
+				end
+			end
+	
+			local boxBase = {}
+			boxBase.__index = boxBase
+	
+			function boxBase:Remove()
+				ESP.Objects[self.Object] = nil
+				for i,v in pairs(self.Components) do
+					v.Visible = false
+					v:Remove()
+					self.Components[i] = nil
+				end
+			end
+	
+			function boxBase:Update()
+				if not self.PrimaryPart then
+					return self:Remove()
+				end
+	
+				local color
+				if ESP.Highlighted == self.Object then
+					color = ESP.HighlightColor
+				else
+					color = self.Color or self.ColorDynamic and self:ColorDynamic() or ESP:GetColor(self.Object) or ESP.Color
+				end
+	
+				local allow = true
+				if ESP.Overrides.UpdateAllow and not ESP.Overrides.UpdateAllow(self) then
+					allow = false
+				end
+				if self.Player and not ESP.TeamMates and ESP:IsTeamMate(self.Player) then
+					allow = false
+				end
+				if self.Player and not ESP.Players then
+					allow = false
+				end
+				if self.IsEnabled and (type(self.IsEnabled) == "string" and not ESP[self.IsEnabled] or type(self.IsEnabled) == "function" and not self:IsEnabled()) then
+					allow = false
+				end
+				if not workspace:IsAncestorOf(self.PrimaryPart) and not self.RenderInNil then
+					allow = false
+				end
+	
+				if not allow then
+					for i,v in pairs(self.Components) do
+						v.Visible = false
+					end
+					return
+				end
+	
+				if ESP.Highlighted == self.Object then
+					color = ESP.HighlightColor
+				end
+	
+				--calculations--
+				local cf = self.PrimaryPart.CFrame
+				if ESP.FaceCamera then
+					cf = CFrame.new(cf.p, cam.CFrame.p)
+				end
+				local size = self.Size
+				local locs = {
+					TopLeft = cf * ESP.BoxShift * CFrame.new(size.X/2,size.Y/2,0),
+					TopRight = cf * ESP.BoxShift * CFrame.new(-size.X/2,size.Y/2,0),
+					BottomLeft = cf * ESP.BoxShift * CFrame.new(size.X/2,-size.Y/2,0),
+					BottomRight = cf * ESP.BoxShift * CFrame.new(-size.X/2,-size.Y/2,0),
+					TagPos = cf * ESP.BoxShift * CFrame.new(0,size.Y/2,0),
+					Torso = cf * ESP.BoxShift
+				}
+	
+				if ESP.Boxes then
+					local TopLeft, Vis1 = WorldToViewportPoint(cam, locs.TopLeft.p)
+					local TopRight, Vis2 = WorldToViewportPoint(cam, locs.TopRight.p)
+					local BottomLeft, Vis3 = WorldToViewportPoint(cam, locs.BottomLeft.p)
+					local BottomRight, Vis4 = WorldToViewportPoint(cam, locs.BottomRight.p)
+	
+					if self.Components.Quad then
+						if Vis1 or Vis2 or Vis3 or Vis4 then
+							self.Components.Quad.Visible = true
+							self.Components.Quad.PointA = Vector2.new(TopRight.X, TopRight.Y)
+							self.Components.Quad.PointB = Vector2.new(TopLeft.X, TopLeft.Y)
+							self.Components.Quad.PointC = Vector2.new(BottomLeft.X, BottomLeft.Y)
+							self.Components.Quad.PointD = Vector2.new(BottomRight.X, BottomRight.Y)
+							self.Components.Quad.Color = color
+						else
+							self.Components.Quad.Visible = false
+						end
+					end
+				else
+					self.Components.Quad.Visible = false
+				end
+	
+				if ESP.Names then
+					local TagPos, Vis5 = WorldToViewportPoint(cam, locs.TagPos.p)
+	
+					if Vis5 then
+						self.Components.Name.Visible = true
+						self.Components.Name.Position = Vector2.new(TagPos.X, TagPos.Y)
+						self.Components.Name.Text = self.Name
+						self.Components.Name.Color = color
+	
+						self.Components.Distance.Visible = true
+						self.Components.Distance.Position = Vector2.new(TagPos.X, TagPos.Y + 14)
+						self.Components.Distance.Text = math.floor((cam.CFrame.p - cf.p).magnitude) .."m away"
+						self.Components.Distance.Color = color
+					else
+						self.Components.Name.Visible = false
+						self.Components.Distance.Visible = false
+					end
+				else
+					self.Components.Name.Visible = false
+					self.Components.Distance.Visible = false
+				end
+	
+				if ESP.Tracers then
+					local TorsoPos, Vis6 = WorldToViewportPoint(cam, locs.Torso.p)
+	
+					if Vis6 then
+						self.Components.Tracer.Visible = true
+						self.Components.Tracer.From = Vector2.new(TorsoPos.X, TorsoPos.Y)
+						self.Components.Tracer.To = Vector2.new(cam.ViewportSize.X/2,cam.ViewportSize.Y/ESP.AttachShift)
+						self.Components.Tracer.Color = color
+					else
+						self.Components.Tracer.Visible = false
+					end
+				else
+					self.Components.Tracer.Visible = false
+				end
+			end
+	
+			function ESP:Add(obj, options)
+				if not obj.Parent and not options.RenderInNil then
+					return warn(obj, "has no parent")
+				end
+	
+				local box = setmetatable({
+					Name = options.Name or obj.Name,
+					Type = "Box",
+					Color = options.Color,
+					Size = options.Size or self.BoxSize,
+					Object = obj,
+					Player = options.Player or plrs:GetPlayerFromCharacter(obj),
+					PrimaryPart = options.PrimaryPart or obj.ClassName == "Model" and (obj.PrimaryPart or obj:FindFirstChild("HumanoidRootPart") or obj:FindFirstChildWhichIsA("BasePart")) or obj:IsA("BasePart") and obj,
+					Components = {},
+					IsEnabled = options.IsEnabled,
+					Temporary = options.Temporary,
+					ColorDynamic = options.ColorDynamic,
+					RenderInNil = options.RenderInNil
+				}, boxBase)
+	
+				if self:GetBox(obj) then
+					self:GetBox(obj):Remove()
+				end
+	
+				box.Components["Quad"] = Draw("Quad", {
+					Thickness = self.Thickness,
+					Color = color,
+					Transparency = 1,
+					Filled = false,
+					Visible = self.Enabled and self.Boxes
+				})
+				box.Components["Name"] = Draw("Text", {
+					Text = box.Name,
+					Color = box.Color,
+					Center = true,
+					Outline = true,
+					Size = 19,
+					Visible = self.Enabled and self.Names
+				})
+				box.Components["Distance"] = Draw("Text", {
+					Color = box.Color,
+					Center = true,
+					Outline = true,
+					Size = 19,
+					Visible = self.Enabled and self.Names
+				})
+	
+				box.Components["Tracer"] = Draw("Line", {
+					Thickness = ESP.Thickness,
+					Color = box.Color,
+					Transparency = 1,
+					Visible = self.Enabled and self.Tracers
+				})
+				self.Objects[obj] = box
+	
+				obj.AncestryChanged:Connect(function(_, parent)
+					if parent == nil and ESP.AutoRemove ~= false then
+						box:Remove()
+					end
+				end)
+				obj:GetPropertyChangedSignal("Parent"):Connect(function()
+					if obj.Parent == nil and ESP.AutoRemove ~= false then
+						box:Remove()
+					end
+				end)
+	
+				local hum = obj:FindFirstChildOfClass("Humanoid")
+				if hum then
+					hum.Died:Connect(function()
+						if ESP.AutoRemove ~= false then
+							box:Remove()
+						end
+					end)
+				end
+	
+				return box
+			end
+	
+			local function CharAdded(char)
+				local p = plrs:GetPlayerFromCharacter(char)
+				if not char:FindFirstChild("HumanoidRootPart") then
+					local ev
+					ev = char.ChildAdded:Connect(function(c)
+						if c.Name == "HumanoidRootPart" then
+							ev:Disconnect()
+							ESP:Add(char, {
+								Name = p.Name,
+								Player = p,
+								PrimaryPart = c
+							})
+						end
+					end)
+				else
+					ESP:Add(char, {
+						Name = p.Name,
+						Player = p,
+						PrimaryPart = char.HumanoidRootPart
+					})
+				end
+			end
+			local function PlayerAdded(p)
+				p.CharacterAdded:Connect(CharAdded)
+				if p.Character then
+					coroutine.wrap(CharAdded)(p.Character)
+				end
+			end
+			plrs.PlayerAdded:Connect(PlayerAdded)
+			for i,v in pairs(plrs:GetPlayers()) do
+				if v ~= plr then
+					PlayerAdded(v)
+				end
+			end
+	
+			game:GetService("RunService").RenderStepped:Connect(function()
+				cam = workspace.CurrentCamera
+				for i,v in (ESP.Enabled and pairs or ipairs)(ESP.Objects) do
+					if v.Update then
+						local s,e = pcall(v.Update, v)
+						if not s then warn("[EU]", e, v.Object:GetFullName()) end
+					end
+				end
+			end)
+	
+			if _G.WRDESPEnabled == nil then _G.WRDESPEnabled = true end
+			if _G.WRDESPBoxes == nil then _G.WRDESPBoxes = true end
+			if _G.WRDESPTeamColors == nil then _G.WRDESPTeamColors = true end
+			if _G.WRDESPTracers == nil then _G.WRDESPTracers = false end
+			if _G.WRDESPNames == nil then _G.WRDESPNames = true end
+	
+			while wait(.1) do
+				ESP:Toggle(_G.WRDESPEnabled or false)
+				ESP.Boxes = _G.WRDESPBoxes or false
+				ESP.TeamColors = _G.WRDESPTeamColors or false
+				ESP.Tracers = _G.WRDESPTracers or false
+				ESP.Names = _G.WRDESPNames or false
+			end
+	
+			_G.WRDESPLoaded = true
+		end
+	end)
+end
+local function AGWGDYF_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Codes.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Codes"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Main3.Visible = true
+	end)
+end
+local function IUMY_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Flee.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Flee"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local localp = game.Players.LocalPlayer
+		for x, y in pairs(game.Players:GetPlayers()) do
+			if y == localp then
+				y:Remove()
+			end
+		end
+		
+	end)
+end
+local function LTBAJ_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main3.More.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_More1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Main4.Visible = true
+	end)
+end
+local function VAPOFIG_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main3.Main4.Back.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Back1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+local function KXFPLTG_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main3.Back.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Back2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+local function PXSCAVB_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main5.LobbyTeleport.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_LobbyTeleport"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local SpawnLocate = game:GetService("Workspace").Lobby.Spawns.Model:FindFirstChild("SpawnLocation")
+		local char = game.Players.LocalPlayer.Character
+	
+		char.HumanoidRootPart.CFrame = SpawnLocate.CFrame
+	end)
+end
+local function TRIUAOR_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main5.RemoveGameHopper.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_RemoveGameHopper"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local hopper = workspace:FindFirstChild("TELEPORT")
+	
+		if hopper then
+			hopper:Destroy()
+		end
+	
+		for x, y in pairs(workspace:GetDescendants()) do
+			if y.Name == "Sign" then
+				y:Destroy()
+			end
+		end
+	end)
+end
+local function MQOC_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main5.Back.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Back3"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+local function KGAG_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main5.EndCurrentRound.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_EndCurrentRound"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local char = game.Players.LocalPlayer.Character
+	local button = script.Parent:WaitForChild("YourTextButtonName")  -- Replace "YourTextButtonName" with the actual name of your TextButton
+	
+	local isToggled = false  -- Initialize the button state
+	
+	button.MouseButton1Click:Connect(function()
+		isToggled = not isToggled  -- Toggle the state
+	
+		if isToggled then
+			-- Start your behavior when the button is toggled on
+			repeat
+				for x, y in pairs(workspace:GetDescendants()) do
+					if y:IsA('Part') and y.Name == "Coin" then
+						char.HumanoidRootPart.CFrame = y.CFrame
+					end
+				end
+				wait()
+			until not isToggled
+		end
+	end)
+	
+	-- You can add code to handle what happens when the button is untoggled if needed.
+	
+end
+local function DOOE_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Main5.CoinsCollector.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_CoinsCollector"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+        local char = game.Players.LocalPlayer.Character
+        repeat
+			for x, y in pairs(workspace:GetDescendants()) do
+				if y:IsA('Part') and y.Name == "Coin" then
+					char.HumanoidRootPart.CFrame = y.CFrame
+				end
+			end
+			wait()
+		until char.Humanoid.Health == 0
+	end)
+	
+end
+local function DVXBMA_fake_script() -- Fake Script: Workspace.GoodBoi.Main.MoreV2.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_MoreV2"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Main5.Visible = true
+	end)
+end
+local function GYLKJ_fake_script() -- Fake Script: Workspace.GoodBoi.Main.Destroy.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Destroy"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local aud = Instance.new('Sound', workspace)
+		aud.SoundId = "rbxassetid://525743689"
+		aud:Play()
+		aud.Ended:Connect(function()
+			aud:Destroy()
+			script.Parent.Parent.Parent:Destroy()
+		end)
+	end)
+end
+local function UFOK_fake_script() -- Fake Script: Workspace.GoodBoi.Toggler.TextButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local enable = false
+	script.Parent.MouseButton1Click:Connect(function()
+		enable = not enable
+		if enable then
+			script.Parent.Parent.Parent.Main.Visible = true
+			script.Parent.Text = "CLOSE"
+		else
+			script.Parent.Parent.Parent.Main.Visible = false
+			script.Parent.Text = "OPEN"
+		end
+	end)
+end
+local function UCJGW_fake_script() -- Fake Script: Workspace.GoodBoi.Notice
+    local script = Instance.new("LocalScript")
+    script.Name = "Notice"
+    script.Parent = Converted["_GoodBoi"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local notification = Instance.new("Sound")
+	notification.Parent = game:GetService("SoundService")
+	notification.SoundId = "rbxassetid://6958727243"
+	notification.Volume = 5
+	notification.Name = "(*peq3wand89B#R("
+	
+	notification:Play()
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Eder Family:";
+		Text = "We noticed an invulnerable client-sided UI in your Gui folder or Core Gui!";
+		Icon = "";
+		Duration = math.huge; 
+		Button1 = "Shutup";
+	})
+	notification.Ended:Connect(function()
+		notification:Destroy()
+	end)
+	
+end
+
+coroutine.wrap(MNVGC_fake_script)()
+coroutine.wrap(TLORJV_fake_script)()
+coroutine.wrap(UTEIHGI_fake_script)()
+coroutine.wrap(LBRBX_fake_script)()
+coroutine.wrap(VMERNP_fake_script)()
+coroutine.wrap(AQJJAGT_fake_script)()
+coroutine.wrap(MZUXYRI_fake_script)()
+coroutine.wrap(TBUTV_fake_script)()
+coroutine.wrap(GYNBADK_fake_script)()
+coroutine.wrap(KDFXN_fake_script)()
+coroutine.wrap(EOMDQ_fake_script)()
+coroutine.wrap(ARFFSS_fake_script)()
+coroutine.wrap(UFGU_fake_script)()
+coroutine.wrap(AGWGDYF_fake_script)()
+coroutine.wrap(IUMY_fake_script)()
+coroutine.wrap(LTBAJ_fake_script)()
+coroutine.wrap(VAPOFIG_fake_script)()
+coroutine.wrap(KXFPLTG_fake_script)()
+coroutine.wrap(PXSCAVB_fake_script)()
+coroutine.wrap(TRIUAOR_fake_script)()
+coroutine.wrap(MQOC_fake_script)()
+coroutine.wrap(KGAG_fake_script)()
+coroutine.wrap(DOOE_fake_script)()
+coroutine.wrap(DVXBMA_fake_script)()
+coroutine.wrap(GYLKJ_fake_script)()
+coroutine.wrap(UFOK_fake_script)()
+coroutine.wrap(UCJGW_fake_script)()
